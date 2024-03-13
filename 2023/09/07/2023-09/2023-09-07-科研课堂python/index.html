@@ -1,0 +1,738 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Python基础架构 | 52Hz的鲸歌</title><meta name="author" content="Cx330-502"><meta name="copyright" content="Cx330-502"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="科研课堂的老师让我介绍一下python基础架构，基本上以《Python金融大数据分析》第二章展开来说~">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python基础架构">
+<meta property="og:url" content="https://cx330-502.github.io/2023/09/07/2023-09/2023-09-07-%E7%A7%91%E7%A0%94%E8%AF%BE%E5%A0%82python/index.html">
+<meta property="og:site_name" content="52Hz的鲸歌">
+<meta property="og:description" content="科研课堂的老师让我介绍一下python基础架构，基本上以《Python金融大数据分析》第二章展开来说~">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cx330-502.github.io/files_/pics/default_pics/1.jpg">
+<meta property="article:published_time" content="2023-09-07T11:38:23.000Z">
+<meta property="article:modified_time" content="2023-09-11T12:01:26.000Z">
+<meta property="article:author" content="Cx330-502">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="conda">
+<meta property="article:tag" content="docker">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cx330-502.github.io/files_/pics/default_pics/1.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://cx330-502.github.io/2023/09/07/2023-09/2023-09-07-%E7%A7%91%E7%A0%94%E8%AF%BE%E5%A0%82python/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Cx330-502","link":"链接: ","source":"来源: 52Hz的鲸歌","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Python基础架构',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-09-11 20:01:26'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/files_/css/mycss.css"><meta name="generator" content="Hexo 6.3.0"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+document.addEventListener('pjax:send', () => {
+  Pace.restart()
+})
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/files_/pics/avatars/1.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/files_/pics/default_pics/1.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="52Hz的鲸歌"><span class="site-name">52Hz的鲸歌</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Python基础架构</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-09-07T11:38:23.000Z" title="发表于 2023-09-07 19:38:23">2023-09-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-11T12:01:26.000Z" title="更新于 2023-09-11 20:01:26">2023-09-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">8.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>28分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Python基础架构"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>在第二章 Python 基础架构中主要有四个部分：</p>
+<ul>
+<li>包管理器conda</li>
+<li>虚拟环境 conda</li>
+<li>Docker容器</li>
+<li>云实例</li>
+</ul>
+<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在介绍conda之前，我们再介绍一下Pyhton。</p>
+<p>在大家刚开始学习 Python的时候，一定会学到 “Python是一门解释型的语言”。</p>
+<p>首先，什么是解释型语言呢，编程语言其实可以分为两大类：</p>
+<ul>
+<li>编译型</li>
+<li>解释型。</li>
+</ul>
+<p>编译型语言有C、C++等等，编译型语言的特点是：<strong>一次编译、永久运行</strong>。因为我们编写的源代码都是计算机无法识别的高级语言，因此通过编译过程，将源代码翻译成机器码，然后就可以直接运行，特点就是<strong>运行效率高，速度快</strong>。</p>
+<p>而解释型语言比如 Basic 语言，它的特点是<strong>边运行边解释</strong>，每执行一次都要翻译一次，因此<strong>效率比较低</strong>。</p>
+<p>那为什么刚才的解释型语言我们举了 Basic 语言的例子但是没有说大家最熟悉的Python呢？事实上，随着越来越多语言的出现，语言的类型早就不止这两种了，我们一般说是解释型语言的Python，实际上并不是一种纯解释的语言，而是一种“编译解释语言”，即<strong>先编译、后解释</strong>。</p>
+<p>Python的编译过程和C、C++的编译不同。一方面，Python是通常是逐模块（逐文件）编译的，而不是编译整个源代码，当导入一个模块或软件包时，Python会编译该模块或软件包的源代码，并将其存储在<code>.pyc</code>文件中，而并不是编译所有的源代码；另一方面，Python编译结果是<em>字节码</em>而不是<em>机器码</em>。</p>
+<p>而在Python程序运行时，它会同时对未编译的源代码和编译后的机器码进行逐行解释并运行。</p>
+<p>那么为什么Python的运行过程这么怪呢，事实上对于标准Python，它是完全通过解释运行的，但是标准Python只带有标准库，如基础的数学库，输入输出等。各种功能强大的软件包必须独立安装，比如 web 相关的 <code>django</code>、<code>flask</code>，数学相关的 <code>numpy</code>，人工智能相关的 <code>pytorch</code> …… </p>
+<p>而正因为有大量的软件包，并且不同软件包：</p>
+<ul>
+<li>下载方式不同</li>
+<li>编译、构建条件不同</li>
+<li>相关依赖不同</li>
+<li>版本众多</li>
+</ul>
+<p>因此，我们必须要有一个工具来管理这些软件包，软件包管理工具应运而生~</p>
+<h2 id="软件包管理器"><a href="#软件包管理器" class="headerlink" title="软件包管理器"></a>软件包管理器</h2><p>事实上，对于初学 Python的同学，大家接触到的第一个包管理器必然是 <code>pip</code> 而不是 <code>conda</code> ，因此，我们先来看看 <code>pip</code> 。</p>
+<h3 id="pip-包管理器"><a href="#pip-包管理器" class="headerlink" title="pip 包管理器"></a>pip 包管理器</h3><p><code>pip</code> 的主要目的是帮助Python开发者轻松管理项目所需的依赖项。通过<code>pip</code>，可以方便地安装第三方Python库、工具和应用程序。</p>
+<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ul>
+<li><p>官方包仓库：pip 默认使用Python Package Index（PyPI）作为官方包仓库。PyPI是一个庞大的Python软件包存储库，包含了成千上万的Python软件包，涵盖了各种领域，从Web开发到数据科学和机器学习。</p>
+</li>
+<li><p>简单的命令：<code>pip</code> 提供了一组简单而直观的命令。</p>
+</li>
+<li><p>自动依赖解决：<code>pip</code> 能够自动解决软件包之间的依赖关系。</p>
+</li>
+<li><p>虚拟环境支持：虽然 <code>pip</code> 本身不提供虚拟环境管理功能，但通常与 virtualenv 或 venv 结合使用，以创建和管理独立的Python虚拟环境。</p>
+</li>
+<li><p>版本控制：<code>pip</code> 允许您安装特定版本的软件包，可以确保依赖关系</p>
+</li>
+<li><p>升级和卸载：<code>pip</code> 不仅可以用于安装软件包，还可以升级和卸载软件包。</p>
+</li>
+<li><p>社区支持：<code>pip</code> 是Python社区的一部分，受到广泛的支持和使用。这意味着有大量的文档、教程和社区资源可供参考和求助。</p>
+</li>
+</ul>
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><p>Python的安装包中带有 <code>pip</code>，因此在安装 Python 后，我们可以直接使用 <code>pip</code> 进行软件包的管理，几条常用命令如下：</p>
+<ol>
+<li><p>安装包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install package_name==version</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>package_name</code>：要安装的软件包名称。</li>
+<li><code>version</code>（可选）：要安装的特定版本号。</li>
+</ul>
+</li>
+<li><p>升级包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --upgrade package_name</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>package_name</code>：要升级的软件包名称。</li>
+</ul>
+</li>
+<li><p>卸载包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip uninstall package_name</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>search_term</code>（可选）：要搜索的关键字。</li>
+</ul>
+</li>
+<li><p>搜索包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip search search_term</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>search_term</code>（可选）：要搜索的关键字。</li>
+</ul>
+</li>
+<li><p>列出已安装的包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip list</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看软件包信息：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip show package_name</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>package_name</code>：要查看信息的软件包名称。</li>
+</ul>
+</li>
+<li><p>安装依赖项文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>requirements.txt</code>：包含依赖项列表的文本文件。</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">requirements.txt</span></span><br><span class="line">asgiref==3.5.2</span><br><span class="line">channels==3.0.2</span><br><span class="line">Django==4.1</span><br><span class="line">html2text==2020.1.16</span><br><span class="line">Markdown==3.4.4</span><br><span class="line">numpy==1.25.2</span><br><span class="line">pdfkit==1.0.0</span><br><span class="line">PyJWT==2.8.0</span><br><span class="line">PyJWT==2.8.0</span><br><span class="line">PyMySQL==1.1.0</span><br><span class="line">pypandoc==1.11</span><br><span class="line">python_docx==0.8.11</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更换下载源</p>
+<p>由于一些众所周知的原因，直接用 <code>pip</code> 连接官方仓库经常卡的一批，这个时候我们可以使用国内镜像源（如清华镜像源等）来下载~</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">临时更换</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple package_name</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>package_name</code> 为包名</li>
+</ul>
+<p>如果要永久更换，就需要更改 <code>pip</code> 的配置文件 <code>pip.ini</code> 或者 <code>pip.conf</code> ，文件路径如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">windows</span></span><br><span class="line">C:\Users\YourUserName\pip\pip.ini</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">macOS</span></span><br><span class="line">~/Library/Application Support/pip/pip.conf</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">linux</span></span><br><span class="line">~/.pip/pip.conf</span><br></pre></td></tr></table></figure>
+<p>打开文件后加入如下内容：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[global]</span></span><br><span class="line"><span class="attr">index-url</span> = https://pypi.tuna.tsinghua.edu.cn/simple/</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="Conda-包管理器"><a href="#Conda-包管理器" class="headerlink" title="Conda 包管理器"></a>Conda 包管理器</h3><p><code>conda</code> 、 MiniConda 、 Anaconda 他们之间到底有什么关系呢？</p>
+<p>和 <code>pip</code> 一样， <code>conda</code>是一个包管理工具，<code>pip</code>有的功能，<code>conda</code>都有。并且：</p>
+<ul>
+<li>它可以用于管理任何编程语言的软件包，不仅仅是Python</li>
+<li><code>conda</code> 本身并不包含任何软件包，但可以用于安装其他软件包。</li>
+<li><code>conda</code> 支持虚拟环境，可以创建独立的Python环境，以隔离不同项目的依赖关系。</li>
+</ul>
+<p>而 MiniConda 、 Anaconda 则是 <code>conda</code> 的不同发行版本。</p>
+<p><code>Miniconda</code> 是一个最小化的<code>conda</code>发行版，它只包含了<code>conda</code>本身和一些基本的库和依赖项，没有任何其他附加的软件包，特点是 <strong>轻量</strong>。</p>
+<p><code>Anaconda</code> 是一个<strong>完整</strong>的数据科学和科学计算发行版，它包含了大量的Python软件包、库和工具，用于数据分析、机器学习、科学计算等领域。</p>
+<p>与Miniconda相比，Anaconda更大、更全面，并且包括了众多数据科学工具，它占用的硬盘也很恐怖，截至写作为止，<code>Anaconda</code>四个虚拟环境占用了我笔记本25G硬盘，而服务器上的 <code>Miniconda</code> 两个环境只占了 956MB 硬盘 (#_&lt;-)</p>
+<h4 id="Miniconda-安装"><a href="#Miniconda-安装" class="headerlink" title="Miniconda 安装"></a>Miniconda 安装</h4><p>首先在命令行中输入 <code>Python -V</code> 查看当前 <code>python</code> 环境版本。</p>
+<p>接下进入 <code>Miniconda</code> 的<a target="_blank" rel="noopener" href="https://docs.conda.io/projects/miniconda/en/latest/">官网</a>，找到对应 <code>python</code> 环境版本和操作系统版本并下载。</p>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic1.png" alt="Miniconda下载页面"></p>
+<p>把文件传输到服务器或者下载到自己的电脑，打开安装文件的文件目录（如果是服务器则 <code>cd</code> 到对应文件目录）</p>
+<ul>
+<li>Windows 直接双击 <code>.exe</code> 文件</li>
+<li>MacOS 直接双击 <code>.pkg</code> 文件</li>
+<li>Linux则运行命令 <code>bash filename</code> </li>
+</ul>
+<p>接下来只要跟着指引一路确认或者回车即可安装成功 (´▽`ʃ♡ƪ)</p>
+<p>安装完成后运行 <code>conda list</code> 命令即可查看虚拟环境（一开始应该只要有 <code>base</code> 环境） </p>
+<h4 id="Anaconda-安装"><a href="#Anaconda-安装" class="headerlink" title="Anaconda 安装"></a>Anaconda 安装</h4><p>直接进入 <code>Anaconda</code> 的 <a target="_blank" rel="noopener" href="https://www.anaconda.com/">官网</a> 或 <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/">清华镜像</a> 选择对应操作系统版本并进行下载</p>
+<p>安装过程与 <code>Miniconda</code> 类似，但是记得在安装步骤中<strong>勾选添加至环境变量中</strong></p>
+<p>安装完成后运行 <code>conda list</code> 命令即可查看虚拟环境（一开始应该只要有 <code>base</code> 环境） </p>
+<h4 id="conda-包管理器常用命令"><a href="#conda-包管理器常用命令" class="headerlink" title="conda 包管理器常用命令"></a>conda 包管理器常用命令</h4><p> <code>conda</code> 作为包管理器，也和 <code>pip</code> 一样有一些常用的命令：</p>
+<ol>
+<li><p>安装包：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install package_name==version</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>package_name</code>：要安装的软件包名称。</li>
+<li><code>version</code>（可选）：要安装的特定版本号。</li>
+</ul>
+</li>
+<li><p>更新包：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda update package_name</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>package_name</code>：要升级的软件包名称。</li>
+</ul>
+</li>
+<li><p>移除包：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda remove package_name</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>package_name</code>：要移除的软件包名称。</li>
+</ul>
+</li>
+<li><p>搜索可用包：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda search package_name</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>package_name</code>：要搜索的软件包名称。</li>
+</ul>
+</li>
+<li><p>列出已安装的包：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda list</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>显示环境中的包信息：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda list --name myenv</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>myenv</code> ：要查询的环境名</li>
+</ul>
+</li>
+<li><p>显示包的详细信息：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda info package_name</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>package_name</code>：要查看的软件包名称。</li>
+</ul>
+</li>
+</ol>
+<p>可以看到， <code>conda</code> 作为软件包管理器的命令和 <code>pip</code> 是差不多的，<strong>但是</strong>，相比较 <code>pip</code> ，<code>conda</code> 有一个巨大的缺陷，即它的软件包存储库远远小于 <code>pip</code> 。  <strong>但是</strong>， <code>conda</code> 是完全兼容 <code>pip</code> 的，也就是说，我们可以在 <code>conda</code> 的虚拟环境中使用 <code>pip</code> 进行软件包的安装，混用当然会带来一些可能的问题：</p>
+<ul>
+<li><code>conda</code> 和 <code>pip</code> 管理的包可能具有不同的依赖关系，导致包冲突。可能会导致难以解决的问题，例如包无法正常工作或环境不稳定。</li>
+<li><code>conda</code> 创建的环境和 <code>pip</code> 安装的包之间可能存在不一致，这可能会导致环境中的包出现问题。</li>
+</ul>
+<p>总之，虽然有各种原因不推荐混用。但我混用至今确实没有问题<em>★,°</em>:.☆(￣▽￣)/$:<em>.°★</em> 。，<code>pip</code> 确实是很方便~</p>
+<h2 id="作为虚拟环境管理器的-conda"><a href="#作为虚拟环境管理器的-conda" class="headerlink" title="作为虚拟环境管理器的 conda"></a>作为虚拟环境管理器的 conda</h2><p>其实说了这么多，我们会发现作为包管理器，用 <code>pip</code> 就完全足够了，那么为什么还要用 <code>conda</code> 呢，因为它有一个非常牛逼的功能——虚拟环境。</p>
+<p>不妨考虑一个问题：</p>
+<blockquote>
+<p>现在有不同的项目需要在同一个服务器上运行，项目一需要 Python &gt;= 3.8 的环境，因为其中有一个核心的算法模型只支持 3.8 及其以上的 Python 版本，而项目二需要 Python &lt;= 3.7 的环境，因为其中有一个拓展包并没有随着 Python 版本的更新而进行维护，导致 Python 3.7 及其以上的环境不支持该拓展包的使用，那么我们该怎么处理呢？</p>
+</blockquote>
+<ul>
+<li>方法 1 </li>
+</ul>
+<p>要用哪个就把另一个软件包给卸载了，但是问题是这样同时只能有一个项目在运行，完全无法满足需求，也会导致服务器的性能浪费。</p>
+<ul>
+<li>方法 2 </li>
+</ul>
+<p>让这两个不同的项目在两个不同的环境中运行，单独给其配置环境就可以了，将两个项目的环境区别开来，互不影响，这样就可以在同一个服务器上进行不同项目的部署了。</p>
+<p>给不同项目单独配置的环境叫做<strong>虚拟环境</strong>，管理虚拟环境的工具就是 <code>conda</code></p>
+<h3 id="虚拟环境管理器-conda-常用命令"><a href="#虚拟环境管理器-conda-常用命令" class="headerlink" title="虚拟环境管理器 conda 常用命令"></a>虚拟环境管理器 conda 常用命令</h3><ol>
+<li><p>创建一个新的Conda环境：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --name myname python=&lt;version&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>myname</code> ：创建环境的名称</li>
+<li><code>&lt;version&gt;</code> ：需要的python版本</li>
+</ul>
+</li>
+<li><p>激活一个Conda环境：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda activate myenv</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>myname</code> ：使用环境的名称</li>
+</ul>
+</li>
+<li><p>退出当前的Conda环境（回到base环境）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda deactivate</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>列出所有已创建的Conda环境：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda info --env</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除一个conda环境（会连同环境中的包一起删除）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda env remove --name myenv</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>myname</code> ：要删除环境的名称</li>
+</ul>
+</li>
+<li><p>导出环境到文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda env export &gt; file_name</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>file_name</code> ：文件名</li>
+</ul>
+</li>
+<li><p>从一个文件中创建环境</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda env create -f file_name</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>file_name</code>：文件名</li>
+</ul>
+</li>
+</ol>
+<h2 id="Docker容器"><a href="#Docker容器" class="headerlink" title="Docker容器"></a>Docker容器</h2><h3 id="引言-1"><a href="#引言-1" class="headerlink" title="引言"></a>引言</h3><p>在我们学院的指导书上， <code>docker</code> 的使用有37页pdf ……. 所以在这里我就简略一点说了。</p>
+<p>在介绍 <code>docker</code> 之前，我们已经介绍完了 <code>conda</code> 虚拟环境，已经几乎完美的解决了本地开发环境的问题，但是注意，只是本地开发。</p>
+<p>在真正的开发过程中，项目必须在多台电脑、服务器上运行，如果仍然使用 <code>conda</code> 虚拟环境，就会面临如下情况：</p>
+<ul>
+<li><p>每次转移项目文件都要重新构建环境</p>
+</li>
+<li><p>太多虚拟环境可能会出现冲突最后不得不重装系统</p>
+</li>
+</ul>
+<p>还有很多其他情况：</p>
+<ul>
+<li><p>我想下载和使用一个软件，所有步骤都按照官方Guide一步步执行，但最后就怎么也启动不 了，总是会报这样或那样的错误(经常用npm 的同学应该深有体会)。</p>
+</li>
+<li><p>我想下载和使用一个软件，结果总是提示依赖库缺失或版本冲突，最后好不容易解决了， 结果把自己本地的环境搞的一团糟，甚至最后不得不重装系统。</p>
+</li>
+<li><p>我在本地写好的代码，明明我的机器上跑的好好的，怎么到你那里就有bug了 ? ! !</p>
+</li>
+<li><p>从网上下载好的一个来源不明程序，莫名奇妙地向你申请各种系统权限，不给权限就罢工。</p>
+</li>
+</ul>
+<h4 id="容器（Container）"><a href="#容器（Container）" class="headerlink" title="容器（Container）"></a>容器（Container）</h4><p>为了解决这种大量的环境问题，我们可以使用<strong>虚拟机技术</strong>来解决，每个虚拟机都有独立的虚拟硬件，操作系统，环境等等。</p>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic2.png" alt="虚拟机"></p>
+<p>但是，如果每运行一个项目就新建一个虚拟机未免太过奢侈，因为虚拟机需要模拟硬件、还需要有操作系统，而这些所占用的资源实际上远远大于项目运行所需。因此，产生了更轻量级的能够隔离两个不同的应用程序的解决方案——<strong>容器</strong>。</p>
+<p>在Linux中，可以使用 <code>namespace</code> 和 <code>cgroups</code> 机制隔离一个或一组进程。至于 <code>namespace</code> 和 <code>cgroups</code> 机制到底是什么，在这里就不详述了，如果有兴趣的可以在<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137082437">这里</a>查看容器实现环境隔离的具体原理。</p>
+<p>我们把这样的一个或一组被隔离的进程称作 “<strong>容器 (Container)</strong>“ 。 当我们提到“启动(或创建)一个容器”时，其实就是在说“使用 <code>namespace</code> 和 <code>cgroups</code> 机制创建一个或一组进程”。</p>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic3.png" alt="虚拟机和容器"></p>
+<p>虚拟机和容器的最大的区别在于，<strong>虚拟机模拟了一整个计算机环境</strong>，其上有一个完整的操作系 统，它有自己的进程调度、内存管理等；而<strong>容器仅仅是被隔离的一个或一组进程</strong>，这些进程和在宿主操作系统看来跟其他普通进程没什么区别，他们会被Kernel以同样的方式调度，以同样的方式使用内存管理。</p>
+<h4 id="镜像（Image）"><a href="#镜像（Image）" class="headerlink" title="镜像（Image）"></a>镜像（Image）</h4><p>容器的运行依赖进程命令本身的可执行文件、依赖库和相关资源文件。</p>
+<p>为了使不同的容器所使用的这些文件之间能够相互隔离，我们可以利用一种“特殊的文件系统”（前文提到的 <code>namespace</code> 中的一种），即，把可执行文件、依赖库和相关资源文件等都放到该”特殊的文件系统”中，当容器启动后，它只需要读写这部分“特殊的文件系统”即可。</p>
+<p>那么，这个“特殊的文件系统”就包含了对容器行为的各种描述，可以认为它就是容器的“模板”，即，这个“特殊的文件系统”长啥样，对应的容器就应该表现出啥样。</p>
+<p>如果学习过面对对象相关的内容，可以把这个“特殊的文件系统”与容器的关系类比为类和对象之间的关系。</p>
+<p>更进一步地，即使我们在不同的机器上启动容器，只要这个“特殊的文件系统”相同，那么总会得到运行效果完全相同的容器。</p>
+<p>在日常使用中，这个“特殊的文件系统”会被打包成压缩包以方便在不同的机器中传递，而这个压缩包被称作“<strong>镜像 (Image)</strong>”。通常情况下，容器总是从一个镜像启动的。</p>
+<blockquote>
+<p>真正生产环境中所用的镜像不止包含上面提到的这些文件，还会包含一些元信息文件，包括但不限于环境变量、容器启动的入口、容器对外暴露的端口等等。</p>
+</blockquote>
+<h4 id="容器运行时（Container-Runtime）"><a href="#容器运行时（Container-Runtime）" class="headerlink" title="容器运行时（Container Runtime）"></a>容器运行时（Container Runtime）</h4><p>在前面的过程中，我们已经从原理上明白了该怎么把一个程序打包成镜像并进行传输，但是还没有考虑我们应该怎么从镜像得到容器再运行。</p>
+<p>并且，同一台机器上可能会启动多个不同容器，有些容器需要动态地停止和启动（比如定时爬取数据），这些工作显然不可能通过手动操作来完成。这是，我们就需要一个工具来帮助我们完成对这些容器的管理工作，我们称这种工具为“<strong>容器进行时（Container Runtime）</strong>”</p>
+<p>容器运行时一般都提供了非常简洁的指令入口，只需要非常简短的命令就可以启动一个复杂的 容器，或者随时停止和重启一个容器。</p>
+<p>目前应用最广泛的容器运行时是 <code>runc</code>, 我们常见的各种容器管理工具，如<strong>Docker</strong>、Podman、containerd等都是以runc为基础构建的。</p>
+<p>对，我们的主角docker终于出现了😂</p>
+<blockquote>
+<p>在通常情况下，我们认为Docker、Podman、containerd 等容器管理工具是广义的容器运行时。</p>
+</blockquote>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic4.png" alt="容器进行时"></p>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic5.png" alt="容器进行时"></p>
+<p>在上面列举的这些容器运行时中，Docker是使用最广泛的容器管理工具，甚至在很多人的认识中，Docker和容器简直就是同义词。虽然Kubernetes将在1.24版本中不再支持使用Docker作为容器运行时，Podman和Containerd也在逐步蚕食Docker的市场，但Docker依然处于垄断地位，很多其他的容器运行时甚至也特意将自己的使用方法设计地和Docker一模一样(如Podman)。</p>
+<h3 id="Docker-介绍"><a href="#Docker-介绍" class="headerlink" title="Docker 介绍"></a>Docker 介绍</h3><p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic6.png" alt="Docker"></p>
+<p>上图是Docker的经典Logo, 一个白鲸载着集装箱的形象。”Docker”这个词是从”Dock”演变来的。 Dock 意为“码头”，Docker自然可以引申为“承载集装箱的工具”。”Container”本身也有”集装箱”的含义， Docker作为一个容器 (Container) 管理工具，这样的logo可谓是非常生动形象了。</p>
+<p>我们平常所说的”Docker”, 其实是一个巨大的结合体。从下图中可以看出，当用户使用Docker  时，要经过多层组件的调用。虽然它们中的很多部分都可以单独作为一个独立软件来用(比如Containerd、runc), 但我们在谈论Docker时，通常认为它们是整个Docker软件的一部分。在 安装Docker时，这些组件也会被同时默认安装。</p>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic7.png" alt="Docker使用"></p>
+<h3 id="Docker的安装"><a href="#Docker的安装" class="headerlink" title="Docker的安装"></a>Docker的安装</h3><p>Docker 的安装过程如下：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/docker/windows-docker-install.html"><strong>Windows安装docker</strong></a></li>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/docker/macos-docker-install.html"><strong>MacOS安装docker</strong></a></li>
+<li><strong>Linux安装docker</strong><ul>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/docker/ubuntu-docker-install.html"><strong>Ubuntu Docker 安装</strong></a></li>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/docker/debian-docker-install.html"><strong>Debian Docker 安装</strong></a></li>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/docker/centos-docker-install.html"><strong>CentOS Docker</strong></a></li>
+</ul>
+</li>
+</ul>
+<p><del>好的，既然大家都已经安装完了 docker ，我们进入下一小节</del></p>
+<p>在这里我们还是简单讲解一下如何在 Windows 中安装 docker~</p>
+<h4 id="安装WSL"><a href="#安装WSL" class="headerlink" title="安装WSL"></a>安装WSL</h4><p>在前面的原理介绍中，我们介绍过了 docker 的容器功能实际上是利用了 linux 系统中的 <code>namesapce</code> 和 <code>cgroups</code> 机制实现的，因此 docker 并非是一个通用的容器工具，它依赖于已存在并运行的 Linux 内核环境。</p>
+<p>docker 实质上是在已经运行的 linux 下制造了一个隔离的文件环境，因此它执行的效率几乎等同于所部署的 linux 主机。</p>
+<p>因此，docker 必须部署在 linux 内核的系统上。如果其他系统想部署 docker 就必须安装一个虚拟 linux 环境。</p>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic8.png" alt="Docker运行于虚拟机上"></p>
+<p>由于 Windows 自带的虚拟机 <code>Hyper-v</code> 需要专业版才能使用，因此我们就不用虚拟机了，而使用 <code>WSL</code> 来准备 docker 运行所需要的环境。</p>
+<p>啥是 <code>WSL</code> 呢，它的全称叫 Windows Subsystem for Linux ， 也就是 Windows 官方提供的一个子系统，使用户可以在 Windows 系统的电脑上方便的使用一些常用的 linux 软件。这里是它的<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/wsl/">官方文档</a>。</p>
+<p>现在让我们开始安装WSL叭~</p>
+<p>首先，我们的操作系统必须是 Windows 10 版本 2004 及更高版本（内部版本 19041 及更高版本）或 Windows 11，否则请考虑升级系统或参考<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/wsl/install-manual">旧版 WSL 的手动安装步骤</a>。</p>
+<p>接下来，请右键点击任务栏上的 Windows 徽标（也就是开始菜单栏），在弹出的目录上选择<strong>终端管理员</strong>。</p>
+<p>现在，大家应该已经以管理员身份打开了 Windows 终端 ，也就是在影视作品里常见的黑框框。输入以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --install</span><br></pre></td></tr></table></figure>
+<p>等待下载完成后重启电脑。</p>
+<p>重启后可能会需要输入 UNIX 的用户名和密码，这和后面的 docker 无关，随便输入常用的用户名密码完成注册就可以了。</p>
+<p>到这里，docker 安装的第一步就完成了，下一步就是安装docker软件。</p>
+<h4 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h4><p>进入Docker的<a target="_blank" rel="noopener" href="https://www.docker.com/">官网</a>并选择 <code>Download for Windows</code> 下载，下载完成后双击 exe 文件即可进入安装。</p>
+<p>安装时记得勾选第一项，即使用我们刚刚安装的 WSL2 而不是微软的 Hyper-V 虚拟机。</p>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic9.png" alt="Docker安装界面"></p>
+<p>点击 OK 后即可开始安装~</p>
+<p>安装完成后，再次重启电脑.会出现 docker 的条款页面，点击接受就能启动 docker 啦！</p>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic10.png" alt="Docker条款"></p>
+<h3 id="Docker-使用"><a href="#Docker-使用" class="headerlink" title="Docker 使用"></a>Docker 使用</h3><p>首次进入 docker ，会出现一个新手教程的页面，请放心，这玩意一点没用（doge）。</p>
+<h4 id="修改镜像源"><a href="#修改镜像源" class="headerlink" title="修改镜像源"></a>修改镜像源</h4><p>我们先点开右上角的设置，来配置一下国内的镜像源，没错，由于某些原因， docker 的官方镜像源国内同样访问不了。</p>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic11.png" alt="Docker界面"></p>
+<p>以类似的格式，在 <code>&quot;registry-mirrors&quot;</code> 后面添上需要的镜像源就可以了。一些可能的镜像源如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">Docker中国区官方镜像</span></span><br><span class="line">https://registry.docker-cn.com</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">网易</span></span><br><span class="line">http://hub-mirror.c.163.com</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">ustc</span></span><br><span class="line">https://docker.mirrors.ustc.edu.cn</span><br></pre></td></tr></table></figure>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic12.png" alt="Docker镜像源配置"></p>
+<h4 id="Docker-架构"><a href="#Docker-架构" class="headerlink" title="Docker 架构"></a>Docker 架构</h4><p>中间的很多过程我也不会，先放张图再这。直接进入下一节吧orz。</p>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic13.png" alt="Docker架构"></p>
+<h4 id="Docker-Image"><a href="#Docker-Image" class="headerlink" title="Docker Image"></a>Docker Image</h4><p>我们先直接列出 Docker Image 的常用指令</p>
+<ul>
+<li><code>docker image ls</code> 可以列出当前机器的所有容器镜像</li>
+</ul>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic14.png" alt="Docker列出镜像"></p>
+<ul>
+<li><code>docker image pull &lt;image_name&gt;</code> 可以从image registry中拉取名称为 image_name 的镜像</li>
+</ul>
+<p><strong>镜像名</strong></p>
+<p>一般地，镜像名完整格式为 <code>&#123;image registry地址&#125;/&#123;仓库名&#125;/&#123;镜像名&#125;:TAG</code> 。<br>例如 <code>scs.buaa.edu.cn:8081/library/mysql:8</code> , 其中：</p>
+<ul>
+<li>scs.buaa.edu.cn:8081/library/mysq1 为镜像的地址，你可以将其简单理解为一个 URL<ul>
+<li>通常情况下，这个地址分为三部分，分别是 image registry 地址、仓库名、 镜像名</li>
+</ul>
+</li>
+<li>8是镜像的TAG, 一般用来表示镜像的版本号。</li>
+</ul>
+<p><strong>镜像ID</strong></p>
+<p>你可能还注意到，当使用 <code>docker image ls</code>时，有一列叫做 IMAGE   ID ，这一列中的字符串其实就是每个镜像对应的独一无二的ID，它是一个镜像独一无二的标识。我们可以使用这个ID对镜像做各种操作，比如删除一个镜像： <code>docker  image  rm  b1f7432ce861</code></p>
+<p><strong>image registry</strong></p>
+<p>在介绍镜像名称时，同学们可能会疑惑， image registry有很多个吗，为啥还需要地址来标识？</p>
+<p>是的，image registry有很多个。 image registry有的是公开的，任何人都可以访问，并从中拉取镜像；也有私有的，需要特殊的口令访问。</p>
+<p>目前，世界上最大的几个公开的image registry有 Docker 公司提供的docker.io   （目前也是世界上最大、使用最广泛的image registry, 如果你需要通过浏览器访问的话，需要使用这个地址：hub.docker.com  )、Redhat 提供的 quay.io、Google 提供的gcr.io  (很可惜，这个地址在国内被*了）；当然还有我们软院的image registry: scs.buaa.edu.cn:8081。</p>
+<p>image registry不仅可以下载已经存在的镜像，还可以上传和保存自己制作的新的镜像。任何人都可以在上述registry网站创建账户和自己的仓库。对于用户上传到image registry中的镜像，用 户可以自行选择是否对其他用户公开访问（公开或私有）。如果是私有镜像，则需要在每次上传和下载镜像前，在本地执行 docker   login操作。</p>
+<h4 id="容器管理"><a href="#容器管理" class="headerlink" title="容器管理"></a>容器管理</h4><p>可以使用 <code>docker ps</code> 命令查看当前机器上处于活跃状态的容器</p>
+<p><code>docker ps -a</code> 可以列出所有状态的容器(包括活跃的和不活跃的):</p>
+<p>和镜像一样，每个容器也都有一个唯一的ID作为标识，我们对容器的各项操作也是通过该ID进行的。除了ID之外，每个容器也都有一个独一无二的name, 我们也可以使用 name 来唯一指定一个容器。</p>
+<p>在Docker的管理下，容器有以下6种状态：</p>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic15.png" alt="Docker容器状态"></p>
+<ol>
+<li>当用户输入 docker run 命令后，容器被创建，进入短暂的 Created 状态。</li>
+<li>当容器进程启动完毕后，容器进入 Running 状态，这表示容器正在正常工作。</li>
+<li>当用户使用 docker stop 显式地终止一个容器，或容器运行出错时，容器进入 Exited 状态。这个状态是不活跃的，处于这个状态的容器不会消耗任何资源。</li>
+<li>对于处于 Exited 的容器，可以被手动使用 docker start 重启，重新进入 Running 状态；也可能被 Docker 管理服务重启，短暂进入 Restarting 状态后，重新回到 Running 状态。</li>
+<li>可以手动使用 docker pause 暂停容器，此时容器将进入 Paused 状态。在这种状态中，容器将停止运行，即不会消耗任何CPU, 但依旧会占据内存(以便随时从这个被 pause 的状态恢复运行)</li>
+<li>当使用 docker rm 删除容器，但容器中的一些资源依旧被外部进程使用时(即无法立即删除时),容器将进入Dead 状态。</li>
+</ol>
+<h5 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h5><p>docker run 命令的结构是： <code>docker run [一堆各种各样的参数] &lt;image name&gt; [启动命令] [命令所使用的参数]</code> 其中，只有镜像名 image_name 是必须的，其余全是可选的。</p>
+<p><strong>启动命令</strong></p>
+<p><font color="red"><b>该部分很无聊，非常无聊</b></font><br></p>
+<p><font color="red"><b>不建议无命令行基础的同志看</b></font><br></p>
+<p><font color="red"><b>即使有基础，如果使用的是Windows或MacOS也不建议看</b></font><br></p>
+<p><font color="red"><b>建议直接看下面的<i>“Docker图形化界面”</i>部分</b></font><br></p>
+<p>可以看一下创建这个 docker 镜像时使用的命令： <code>docker run - it --rm ubuntu /bin/bash</code></p>
+<p>这里的参数是-it  -rm, 镜像名是ubuntu, 启动命令是/bin/bash, 没有命令参数。</p>
+<p>这里/bin/bash 的含义是，启动ubuntu容器后，执行/bin/bash 命令，即启动一个bash shell。我们可以将这里的/bin/bash 换成 ls /usr ，这时，启动命令是ls, 命令参数是/usr, 表示启动ubuntu容器，并在其中执行ls /usr命令，即列出/usr目录下的所有目录和文件。可以看到，执行效果确实如此。并且，请注意，因为我们没有执行/bin/bash 命令，在 ls 命令执行完返回后，并没有进入容器的命令行中，而是回到了宿主机。</p>
+<p><strong>-it</strong></p>
+<p>参数 i 表示 interactive,  参数 t 表示创建一个虚拟的TTY(pseudo-TTY)。简单来说， -it参数可以让我们进入一个可以与容器进行交互的终端环境。</p>
+<p>如果，如果我们在启动命令中去掉-it, 启动的ubuntu容器将会在后台运行，我们将无法和它交互。</p>
+<p><strong>—rm</strong><br>参数—rm 表示当容器退出后，自动删除容器。</p>
+<p>如果在执行容器时，不加 —rm 参数，则当从容器退出后，容器进入 Exited 状态，继续存在在机器上(虽然此时为非活跃状态，不消耗任何资源)，并且我们可以用 docker restart 等命令重启容器，或使用 docker exec 命令查看容器中的文件。只能使用 docker rm 命令手动删除容器。</p>
+<p><strong>-v</strong><br>到现在为止，我们使用的容器的文件系统都是与宿主机完全隔离的。但在很多时候，容器需要与宿主机共享一些目录，比如位于宿主机上的一些进程希望能方便地看到容器运行中产生的文件，或者通过修改一些文件来影响容器的行为。</p>
+<p>为了解决这一问题，我们可以使用 -v 参数将容器的某个目录和宿主机的某个目录绑定起来，使得 容器在读写某个目录时，相当于在同时读写宿主机的某个目录。</p>
+<p>参数 -v 的使用方法是 <code>docker run -v &lt;宿主机的目录&gt;:&lt;容器的目录&gt; &lt;image_name&gt;</code></p>
+<p><strong>—name</strong></p>
+<p>参数 —name 可以为启动的容器添加名字。我们之前的 docker run 命令都没有使用该参数，那么这时docker自己会为该容器分配一个随机字符串作为name。</p>
+<p><strong>Docker图形化界面</strong></p>
+<p>其实还有好几个参数，但是实在懒得写了 … 因为，GUI 是人类的伟大发明，既然有 GUI 了谁还用 CLI 啊：</p>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic16.png" alt="Docker图形化界面"></p>
+<p>直接点击运行，然后在容器界面：</p>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic17.png" alt="Docker图形化界面"></p>
+<p>不能说要啥有啥，只能说是应有尽有吧：容器的启动删除、命令行、文件管理、日志，还要啥自行车（图上一堆报错是因为是以前构建的项目，连接的服务器已经关闭了~）</p>
+<h4 id="构建新镜像"><a href="#构建新镜像" class="headerlink" title="构建新镜像"></a>构建新镜像</h4><p>到现在为止，我们只是在使用他人已经提前做好的镜像。如何制造我们自己的镜像呢?下面给<br>出两种方法。</p>
+<h5 id="docker-commit"><a href="#docker-commit" class="headerlink" title="docker commit"></a>docker commit</h5><p>假设我们正在使用一个容器，并且在该容器的根目录下创建了一个非常重要的数据文件：</p>
+<p>如果我想把当前容器的状态保存下来，以便下次启动容器的时候可以重新使用该文件；或者我想把当前容器发送给别人，让别人也看到我当前看到的容器的样子，该怎么办呢？可以使用<code>docker commit</code> 命令将当前容器打包成一个新的镜像。</p>
+<p>重新打开一个终端，查看一下当前容器的ID:</p>
+<p>然后直接 <code>docker  commit  &lt;container id&gt;&lt;new image name&gt;</code> 即可：</p>
+<p>这时，使用 <code>docker image ls</code> 可以看到这个新生成的镜像：</p>
+<h4 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h4><p>docker commit 虽然可以非常直观地从当前容器创建一个新的镜像。但整个过程不够规范，也很难实现自动化， 一般情况下，我们都是使用Dockerfile来构建镜像的。</p>
+<p>所谓的 Dockerfile ， 其实就是一个配置文件，里面描述了构建镜像的步骤。对于我之前完成的一个 Image 的 Dockerfile 文件如下：</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> python:latest</span><br><span class="line"></span><br><span class="line"><span class="keyword">copy</span><span class="language-bash"> ./ /app</span></span><br><span class="line"><span class="keyword">workdir</span><span class="language-bash"> /app</span></span><br><span class="line"><span class="keyword">run</span><span class="language-bash"> pip install -r requirements.txt</span></span><br><span class="line"><span class="keyword">run</span><span class="language-bash"> pip install flask_sqlalchemy</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">cmd</span><span class="language-bash"> sh ./start.sh</span></span><br></pre></td></tr></table></figure>
+<p>很显然，上述文件内容是自解释的。 一般 Dockerfile 的开头一条 FROM 语句，表示从以哪个镜像为基础进行构建。下面的 RUN 语句表示在容器中执行一条命令。</p>
+<p>在工作根目录下执行 <code>docker build -t app:v1 -f dockerfile .</code> 注意最后面的点 “.” 表示当前目录。</p>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic18.png" alt="Docker构建镜像"></p>
+<p>此时，我们就可以在 docker 的GUI界面上看到新的镜像了：</p>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic19.png" alt="Docker镜像构建成功"></p>
+<ul>
+<li>-t 表示要构建的新的镜像的名称</li>
+<li><p>-f 表示Dockerfile文件的路径</p>
+</li>
+<li><p>命令中最后的单词表示表示构建镜像的上下文路径，上图中这个最后的单词是.,则表示 上下文路径是当前目录。在镜像构建开始的时候， docker cli会把“上下文路径”指定的目录 中的所有内容打包，然后整个发送给docker engine。</p>
+</li>
+</ul>
+<p>事实上， Dockerfile 还支持非常多的指令，具体请查阅<a target="_blank" rel="noopener" href="https://docs.docker.com/engine/reference/builder/">官方文档</a>。</p>
+<h4 id="发布镜像"><a href="#发布镜像" class="headerlink" title="发布镜像"></a>发布镜像</h4><p>截止目前，我们构建的镜像全是在本机上，别人根本访问不到，也没法使用。我们可以将镜像 push 到 image  registry 上，然后通知对方从该image  registry拉取即可。具体可以使用GUI中的 push 操作，也可以参考<a target="_blank" rel="noopener" href="https://docs.docker.com/engine/reference/commandline/push/">官方文档</a>了解CLI的 push 过程。</p>
+<h2 id="云实例"><a href="#云实例" class="headerlink" title="云实例"></a>云实例</h2><p>书上使用了 <a target="_blank" rel="noopener" href="https://www.digitalocean.com/">DigitalOcean</a> 构建云实例，但是我刚注册好它就让我绑定银行卡，而且需要 VISA 卡或者 PayPal … 所以我准备直接用我自己的腾讯云服务器进行部署。</p>
+<p>首先，我们来新建一个叫 <code>jupyter</code> 的conda虚拟环境，python版本为3.10</p>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic20.png" alt="新建虚拟环境"></p>
+<p>进入该环境后，安装 jupyter notebook 的软件包。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip3 install ipython</span><br><span class="line">pip3 install jupyter</span><br></pre></td></tr></table></figure>
+<p>新建一个文件夹，作为 jupyter notebook 的工作目录，并进入该工作目录。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir jupyter_notebook</span><br><span class="line">cd jupyter_notebook/</span><br></pre></td></tr></table></figure>
+<p>首先，我们生成 jupyter_notebook 的配置文件。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic21.png" alt="生成jupyter配置文件"></p>
+<p>我们会看到，系统输出了配置文件所在的路径，先记住它，等会要用。</p>
+<p>接下来我们设置密码，输入 <code>jupyter server password</code> 后回车，输入两遍密码即可。</p>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic22.png" alt="更改密码"></p>
+<p>这里又生成了一个配置文件，我们通过 vim 命令访问一下。</p>
+<blockquote>
+<p>可能有对 vim 不熟悉的同学，这是一个很nb的编辑器。有很多指令，可以在<a target="_blank" rel="noopener" href="https://blog.csdn.net/Amentos/article/details/129202797">Vim 编辑器 - 基础入门_vim入门_Amentos的博客-CSDN博客</a>学习一下~</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /home/ubuntu/.jupyter/jupyter_server_config.json</span><br></pre></td></tr></table></figure>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic23.png" alt="哈希密码"></p>
+<p>我们看到了一串 <code>argon2</code> 或 <code>sha1</code> 开头的哈希密码，这取决于 jupyter 的版本，在新版本的 jupyter 中采用了更安全的 <code>argon2</code> 算法来生成密码，我们把双引号内的哈希密码复制，并退出该文件。</p>
+<p>接下来编辑最开始的配置文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /home/ubuntu/.jupyter/jupyter_notebook_config.py</span><br></pre></td></tr></table></figure>
+<p>在文件的底部添上以下的五行代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">c.NotebookApp.ip=<span class="string">&#x27;*&#x27;</span> <span class="comment"># *代表所有机器都可访问，或者输入服务ip</span></span><br><span class="line">c.NotebookApp.password = <span class="string">u&#x27;&#x27;</span> <span class="comment"># 把引号中的内容替换为刚刚复制的哈希密码</span></span><br><span class="line">c.NotebookApp.notebook_dir = <span class="string">u&#x27;/home/ubuntu/jupyter_notebook&#x27;</span> <span class="comment"># 第一步创建的工作目录</span></span><br><span class="line">c.NotebookApp.open_browser = <span class="literal">False</span></span><br><span class="line">c.NotebookApp.port = <span class="number">8888</span></span><br><span class="line">c.NotebookApp.allow_root = <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+<p>按 esc 后输入 <code>:wq</code> 保存并退出。</p>
+<p>接下来就可以运行啦！输入 <code>jupyter notebook</code> 命令即可将 jupyter notebook 在 8888 端口运行。（记得在服务器防火墙打开 8888 端口）。</p>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic24.png" alt="启动 jupyter 服务"></p>
+<p>在浏览器中输入 <code>ip地址:8888</code> 即可进入jupyter notebook的登陆页面。</p>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic25.png" alt="登录jupyter"></p>
+<p>输入密码后即可看到我们的工作目录并开始写代码啦。</p>
+<p><img src="/files_/pics/post_pics/2023-09/2023-09-07-科研课堂python/pic26.png" alt="jupyter notebook主页"></p>
+<p>当然，此时我们的服务器命令还一直在运行着jupyter服务，感兴趣的同学可以研究下<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_50511203/article/details/129329451">Tmux</a>让它一直在后台运行~</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>四个模块的内容终于全部讲完了，其实可以很清楚的发现，docker讲的最多，但是也最乱，毕竟笔者自己也用的很少QAQ。</p>
+<p>实际上对于非科班的同学来说，docker和云实例的使用相对较少（该不会真有人为了可以在浏览器里用 jupyter notebook 就化几百块一年买个服务器吧doge），而 pip 和 conda 虚拟环境其实就已经满足了绝大多数的生产需求。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a target="_blank" rel="noopener" href="https://github.com/Cx330-502">Cx330-502</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://cx330-502.github.io/2023/09/07/2023-09/2023-09-07-%E7%A7%91%E7%A0%94%E8%AF%BE%E5%A0%82python/">https://cx330-502.github.io/2023/09/07/2023-09/2023-09-07-%E7%A7%91%E7%A0%94%E8%AF%BE%E5%A0%82python/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://cx330-502.github.io" target="_blank">52Hz的鲸歌</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><a class="post-meta__tags" href="/tags/python/">python</a><a class="post-meta__tags" href="/tags/conda/">conda</a><a class="post-meta__tags" href="/tags/docker/">docker</a></div><div class="post_share"><div class="social-share" data-image="/files_/pics/default_pics/1.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B04/" title="组合数学笔记(四)"><img class="cover" src="/files_/pics/default_pics/2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">组合数学笔记(四)</div></div></a></div><div class="next-post pull-right"><a href="/2023/09/14/2023-09/2023-09-14-UE%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85/" title="UE源码从编译到安卓打包"><img class="cover" src="/files_/pics/default_pics/5.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">UE源码从编译到安卓打包</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/" title="组合数学笔记(一)"><img class="cover" src="/files_/pics/default_pics/5.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-05</div><div class="title">组合数学笔记(一)</div></div></a></div><div><a href="/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B02/" title="组合数学笔记(二)"><img class="cover" src="/files_/pics/default_pics/1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-05</div><div class="title">组合数学笔记(二)</div></div></a></div><div><a href="/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B03/" title="组合数学笔记(三)"><img class="cover" src="/files_/pics/default_pics/2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-05</div><div class="title">组合数学笔记(三)</div></div></a></div><div><a href="/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B04/" title="组合数学笔记(四)"><img class="cover" src="/files_/pics/default_pics/2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-05</div><div class="title">组合数学笔记(四)</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/files_/pics/avatars/1.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Cx330-502</div><div class="author-info__description">我与春风皆过客，你携秋水揽星河</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Cx330-502"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Cx330-502" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1175963382zx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">52Hz的鲸歌</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8"><span class="toc-text">软件包管理器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#pip-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8"><span class="toc-text">pip 包管理器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E7%82%B9"><span class="toc-text">特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">常用命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conda-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8"><span class="toc-text">Conda 包管理器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Miniconda-%E5%AE%89%E8%A3%85"><span class="toc-text">Miniconda 安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Anaconda-%E5%AE%89%E8%A3%85"><span class="toc-text">Anaconda 安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#conda-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">conda 包管理器常用命令</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E4%B8%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%AE%A1%E7%90%86%E5%99%A8%E7%9A%84-conda"><span class="toc-text">作为虚拟环境管理器的 conda</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%AE%A1%E7%90%86%E5%99%A8-conda-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">虚拟环境管理器 conda 常用命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Docker%E5%AE%B9%E5%99%A8"><span class="toc-text">Docker容器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E8%A8%80-1"><span class="toc-text">引言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%EF%BC%88Container%EF%BC%89"><span class="toc-text">容器（Container）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%95%9C%E5%83%8F%EF%BC%88Image%EF%BC%89"><span class="toc-text">镜像（Image）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E8%BF%90%E8%A1%8C%E6%97%B6%EF%BC%88Container-Runtime%EF%BC%89"><span class="toc-text">容器运行时（Container Runtime）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Docker-%E4%BB%8B%E7%BB%8D"><span class="toc-text">Docker 介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Docker%E7%9A%84%E5%AE%89%E8%A3%85"><span class="toc-text">Docker的安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85WSL"><span class="toc-text">安装WSL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85docker"><span class="toc-text">安装docker</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Docker-%E4%BD%BF%E7%94%A8"><span class="toc-text">Docker 使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E9%95%9C%E5%83%8F%E6%BA%90"><span class="toc-text">修改镜像源</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Docker-%E6%9E%B6%E6%9E%84"><span class="toc-text">Docker 架构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Docker-Image"><span class="toc-text">Docker Image</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86"><span class="toc-text">容器管理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E5%AE%B9%E5%99%A8"><span class="toc-text">启动容器</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%84%E5%BB%BA%E6%96%B0%E9%95%9C%E5%83%8F"><span class="toc-text">构建新镜像</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#docker-commit"><span class="toc-text">docker commit</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Dockerfile"><span class="toc-text">Dockerfile</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%91%E5%B8%83%E9%95%9C%E5%83%8F"><span class="toc-text">发布镜像</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%91%E5%AE%9E%E4%BE%8B"><span class="toc-text">云实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/11/11/2023-11/2023-11-11-llvm%E4%B8%AD%E9%97%B4%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90-%E8%B7%B3%E8%BD%AC/" title="LLVM 中间代码生成 跳转"><img src="/files_/pics/default_pics/5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LLVM 中间代码生成 跳转"/></a><div class="content"><a class="title" href="/2023/11/11/2023-11/2023-11-11-llvm%E4%B8%AD%E9%97%B4%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90-%E8%B7%B3%E8%BD%AC/" title="LLVM 中间代码生成 跳转">LLVM 中间代码生成 跳转</a><time datetime="2023-11-11T15:48:17.000Z" title="发表于 2023-11-11 23:48:17">2023-11-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/11/2023-10/2023-10-11-CPP%E5%A4%B4%E6%96%87%E4%BB%B6%E4%BE%9D%E8%B5%96%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/" title="Python CPP头文件依赖分析工具"><img src="/files_/pics/default_pics/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python CPP头文件依赖分析工具"/></a><div class="content"><a class="title" href="/2023/10/11/2023-10/2023-10-11-CPP%E5%A4%B4%E6%96%87%E4%BB%B6%E4%BE%9D%E8%B5%96%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/" title="Python CPP头文件依赖分析工具">Python CPP头文件依赖分析工具</a><time datetime="2023-10-11T05:53:39.000Z" title="发表于 2023-10-11 13:53:39">2023-10-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/11/2023-10/2023-10-11-%E6%8E%92%E7%8F%AD%E5%B7%A5%E5%85%B7/" title="Python 排班工具"><img src="/files_/pics/default_pics/3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python 排班工具"/></a><div class="content"><a class="title" href="/2023/10/11/2023-10/2023-10-11-%E6%8E%92%E7%8F%AD%E5%B7%A5%E5%85%B7/" title="Python 排班工具">Python 排班工具</a><time datetime="2023-10-11T05:46:38.000Z" title="发表于 2023-10-11 13:46:38">2023-10-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/29/2023-09/2023-09-29-python2.x.x%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/" title="Python 2.7.x使用pip报错"><img src="/files_/pics/default_pics/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python 2.7.x使用pip报错"/></a><div class="content"><a class="title" href="/2023/09/29/2023-09/2023-09-29-python2.x.x%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/" title="Python 2.7.x使用pip报错">Python 2.7.x使用pip报错</a><time datetime="2023-09-29T13:43:39.000Z" title="发表于 2023-09-29 21:43:39">2023-09-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/14/2023-09/2023-09-14-UE%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85/" title="UE源码从编译到安卓打包"><img src="/files_/pics/default_pics/5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="UE源码从编译到安卓打包"/></a><div class="content"><a class="title" href="/2023/09/14/2023-09/2023-09-14-UE%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85/" title="UE源码从编译到安卓打包">UE源码从编译到安卓打包</a><time datetime="2023-09-14T02:16:40.000Z" title="发表于 2023-09-14 10:16:40">2023-09-14</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/files_/pics/default_pics/1.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By Cx330-502</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">welcome to my <a href="https://cx330-502.github.io/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addModeChange('mermaid', runMermaid)
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><script id="canvas_nest" defer="defer" color="255,255,255" opacity="1" zIndex="-1" count="99" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="富强,民主,文明" data-fontsize="15px" data-random="true" async="async"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

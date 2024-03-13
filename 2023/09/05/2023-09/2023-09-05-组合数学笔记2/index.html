@@ -1,0 +1,652 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>组合数学笔记(二) | 52Hz的鲸歌</title><meta name="author" content="Cx330-502"><meta name="copyright" content="Cx330-502"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="对方不想和你说话并向你扔了一本组合数学(bushi) 上学期记了一个学期的组合数学笔记发一下叭~">
+<meta property="og:type" content="article">
+<meta property="og:title" content="组合数学笔记(二)">
+<meta property="og:url" content="https://cx330-502.github.io/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B02/index.html">
+<meta property="og:site_name" content="52Hz的鲸歌">
+<meta property="og:description" content="对方不想和你说话并向你扔了一本组合数学(bushi) 上学期记了一个学期的组合数学笔记发一下叭~">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cx330-502.github.io/files_/pics/default_pics/1.jpg">
+<meta property="article:published_time" content="2023-09-05T07:10:01.000Z">
+<meta property="article:modified_time" content="2023-09-05T07:10:04.000Z">
+<meta property="article:author" content="Cx330-502">
+<meta property="article:tag" content="组合数学">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cx330-502.github.io/files_/pics/default_pics/1.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://cx330-502.github.io/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B02/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Cx330-502","link":"链接: ","source":"来源: 52Hz的鲸歌","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '组合数学笔记(二)',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-09-05 15:10:04'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/files_/css/mycss.css"><meta name="generator" content="Hexo 6.3.0"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+document.addEventListener('pjax:send', () => {
+  Pace.restart()
+})
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/files_/pics/avatars/1.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/files_/pics/default_pics/1.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="52Hz的鲸歌"><span class="site-name">52Hz的鲸歌</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">组合数学笔记(二)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-09-05T07:10:01.000Z" title="发表于 2023-09-05 15:10:01">2023-09-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-05T07:10:04.000Z" title="更新于 2023-09-05 15:10:04">2023-09-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="组合数学笔记(二)"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="组合数学"><a href="#组合数学" class="headerlink" title="组合数学"></a>组合数学</h3><h2 id="第4章-生成排列和组合"><a href="#第4章-生成排列和组合" class="headerlink" title="第4章 生成排列和组合"></a>第4章 生成排列和组合</h2><h3 id="4-1-生成排列"><a href="#4-1-生成排列" class="headerlink" title="4.1 生成排列"></a>4.1 生成排列</h3><h4 id="递归生成算法"><a href="#递归生成算法" class="headerlink" title="递归生成算法"></a>递归生成算法</h4><h4 id="邻位对换算法"><a href="#邻位对换算法" class="headerlink" title="邻位对换算法"></a>邻位对换算法</h4><blockquote>
+<p>定义</p>
+</blockquote>
+<p>如果整数 k 的箭头指向与其相邻但比它小的整数, 则称 k 是可移动（活动）的</p>
+<blockquote>
+<p>算法</p>
+</blockquote>
+<p>生成{1, 2, …, n}的排列算法:</p>
+<ol>
+<li>初始：% “ … (；</li>
+<li>while 存在活动整数时，do<br> (1) 求出最大的活动整数 m<br> (2) 交换 m 和其箭头指向的相邻整数的位置<br> (3) 改变所有满足p&gt;m的整数 p 的箭头方向。</li>
+<li>不存在活动整数时，算法结束。</li>
+</ol>
+<blockquote>
+<p>结论：两种算法生成的排列顺序一致</p>
+</blockquote>
+<h3 id="4-2-排序中的逆序"><a href="#4-2-排序中的逆序" class="headerlink" title="4.2 排序中的逆序"></a>4.2 排序中的逆序</h3><blockquote>
+<p>定义</p>
+</blockquote>
+<ol>
+<li><p><strong>逆序：</strong>令 <script type="math/tex">i_1,i_2 ,…, i_n</script>  是集合 <script type="math/tex">{1, 2, …, n}</script> 的一个排列，如果 <script type="math/tex">0 \leq k < l \leq n</script> , 且 <script type="math/tex">i_k > i_l</script>  , 称数对 <script type="math/tex">（i_k , i_l）</script> 是排列的一个逆序。</p>
+</li>
+<li><p><strong>逆序数：</strong>对于 { <script type="math/tex">{1, 2, …, n}</script> } 上的一个排列，令  <script type="math/tex">a_j</script>  表示第二元是  <script type="math/tex">j</script>   的逆序的数量，即  <script type="math/tex">a_j</script>  是排列中先于整数  <script type="math/tex">j</script>  并大于  <script type="math/tex">j</script>  的整数的个数，用于度量  <script type="math/tex">j</script>  的反序程度。</p>
+</li>
+<li><p><strong>逆序列：</strong>令  <script type="math/tex">a_j</script>  表示排列  <script type="math/tex">i_1,i_2 ,…, i_n</script>  中数  <script type="math/tex">j</script>  的逆序数，称  <script type="math/tex">a_1,a_2 ,…, a_n</script>  为排列  <script type="math/tex">i_1,i_2 ,…, i_n</script>  的逆序列。</p>
+</li>
+<li><p><strong>奇排列、偶排列：</strong>逆序个数为奇数的排列称为奇排列；逆序个数为偶数的排列称为偶排列</p>
+</li>
+</ol>
+<blockquote>
+<p>性质</p>
+</blockquote>
+<p>性质1：排列  $i<em>1,i_2,…,i_n$  的逆序列  $a_1,a_2,…,a_n$  满足： $0\leq a_1\leq n-1,0\leq a_2\leq n-2,…,0 \leq a</em>{n-1}\leq1,a_n=0（1）$<br>性质2：满足条件（1）的序列  <script type="math/tex">a_1,a_2,…,a_n</script>  有  <script type="math/tex">n!</script>  个。</p>
+<blockquote>
+<p>定理</p>
+</blockquote>
+<ol>
+<li><p>令  <script type="math/tex">b_1, b_2,…, b_n</script>  为满足 <script type="math/tex">0\leq b_1\leq n-1,0\leq b_2\leq n-2,...,0\leq b_{n-1}\leq1,b_n=0</script> 的整数序列，那么存在集合{  <script type="math/tex">1, 2, …, n</script>  }的唯一一个排列，满足它的逆序列为  <script type="math/tex">b_1, b_2,…, b_n</script>  </p>
+</li>
+<li><p>n阶矩阵  <script type="math/tex">A=[a_{ij}] (i, j =1, 2, .., n)</script> , 其行列式为  <script type="math/tex">det(A)= \Sigma \varepsilon (i_1i_2…i_n)a_{i_1}a_{i_2}…a_{i_n}</script>  ,其中， <script type="math/tex">ε(i_1i_2…i_n)</script> 是 <script type="math/tex">i_1i_2…i_n</script> 的符号(偶排列为+1，奇排列为-1)</p>
+</li>
+<li><p>已知排列  <script type="math/tex">i_1, i_2 ,…, i_n</script>  的逆序列为 <script type="math/tex">b_1b_2 … b_n</script> ，且  <script type="math/tex">k = b_1+ b_2+… + b_n</script>  为逆序数。则可以通过  <script type="math/tex">k</script>  次交换相邻两个数，转化为 <script type="math/tex">1 2 … n</script> 。</p>
+</li>
+</ol>
+<h3 id="4-3-生成组合"><a href="#4-3-生成组合" class="headerlink" title="4.3 生成组合"></a>4.3 生成组合</h3><h4 id="算法1：字典序的组合生成"><a href="#算法1：字典序的组合生成" class="headerlink" title="算法1：字典序的组合生成"></a>算法1：字典序的组合生成</h4><p>通过特征函数，将n元集合 <script type="math/tex">S=</script> { <script type="math/tex">{x_{n-1}, x_{n-2}, …, x_0}</script> }的组合与长度 为 <script type="math/tex">n</script>  的二进制数一一对应</p>
+<p>算法按自然二进制数顺序生成， 称为n元<br>组字典序。</p>
+<p><strong>子集的压缩序：</strong>当 j&lt;n-1时，{ <script type="math/tex">x_j, …, x_1, x_0</script> }的所有组合都在至少含有{ <script type="math/tex">x_{n-1},…, x_{j+1}</script> }中一个元素的组合的前面</p>
+<h4 id="算法2：发射Gray码序生成算法"><a href="#算法2：发射Gray码序生成算法" class="headerlink" title="算法2：发射Gray码序生成算法"></a>算法2：发射Gray码序生成算法</h4><h5 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h5><p>相邻的组合仅相差一个元素（增加一个或者删除一个元素）</p>
+<h5 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h5><h6 id="n阶Gray码"><a href="#n阶Gray码" class="headerlink" title="n阶Gray码"></a>n阶Gray码</h6><ol>
+<li>n 元组看作是 n 维空间的点的坐标。</li>
+<li>每两个点的坐标仅有一个位置不同时，有一条连线。</li>
+<li>算法生成所有的 n 元组：遍历 n 维空间的每个点，使得每个点与其后继只在一个位置不同。</li>
+<li>产生的路径称为n阶Gray码</li>
+</ol>
+<h6 id="循环Gray码"><a href="#循环Gray码" class="headerlink" title="循环Gray码"></a>循环Gray码</h6><p>遍历可以再经过一条边从终点返回到起点</p>
+<h6 id="n阶Gray反射码"><a href="#n阶Gray反射码" class="headerlink" title="n阶Gray反射码"></a>n阶Gray反射码</h6><ol>
+<li><p>1阶反射Gray码是 0 或 1</p>
+</li>
+<li><p>设 n&gt;1 且 n-1 阶反射 Gray 码已经构造，如下构建 n 阶反射 Gray 码：<br> (1) 以 n-1 阶反射 Gray 码所给出的顺序列出 0 和 1 的 n-1 元组，把 0 添到每个 n-1 元组的开头，<br> (2) 再反序列出 n-1 阶反射 Gray 码的全部 n-1 元组, 并把1加到全部 n-1 元组的开头。</p>
+</li>
+</ol>
+<ul>
+<li>n 阶反射 Gray 码以 00…0 开始，并以 10…0 结束。</li>
+<li>n 因为 00…0 与 10…0 只相差一位，因此该码是循环码。</li>
+</ul>
+<p>递归方法构造反射 Gray 码，生成组合。</p>
+<h5 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h5><h6 id="逐次法"><a href="#逐次法" class="headerlink" title="逐次法"></a>逐次法</h6><ul>
+<li>以反射 Gray 码的顺序直接生成 0，1 的n元组</li>
+</ul>
+<ol>
+<li><p>初始： <script type="math/tex">a_{n-1}…a_1a_0＝0…00</script> </p>
+</li>
+<li><p>当  <script type="math/tex">a_{n-1}…a_1a_0 \neq 10…0</script>  时，进行以下操作：<br> (1) 计算  <script type="math/tex">\sigma(a_{n-1}…a_1a_0) = a_{n-1}+…+a_1+a_0</script><br> (2) 如果  <script type="math/tex">\sigma(a_{n-1}…a_1a_0)</script> 是偶数，则改变  <script type="math/tex">a_0（0变1或1变0）</script><br> (3) 否则，确定  <script type="math/tex">j</script> ，使得  <script type="math/tex">a_j=1</script>  且对于所有 <code>$ i&lt; j, a_i
+ ＝0 $</code> ，然后，改变 <script type="math/tex">a_{j+1}（0变1或1变0）</script>  。</p>
+</li>
+</ol>
+<h5 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h5><ol>
+<li>对于每一个正整数 n ， 逐次法生成 n 阶反射Gray码</li>
+</ol>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><h5 id="字典序"><a href="#字典序" class="headerlink" title="字典序"></a>字典序</h5><ul>
+<li>与二进制数顺序一致</li>
+</ul>
+<h5 id="反射-Gray-码"><a href="#反射-Gray-码" class="headerlink" title="反射 Gray 码"></a>反射 Gray 码</h5><ul>
+<li><p>相邻两个子集相差一个元素</p>
+</li>
+<li><p>递归法、逐次法</p>
+</li>
+</ul>
+<h6 id="确定-n-元组在-Gray-码序表的准确位置"><a href="#确定-n-元组在-Gray-码序表的准确位置" class="headerlink" title="确定 n 元组在 Gray 码序表的准确位置"></a>确定 n 元组在 Gray 码序表的准确位置</h6><p>给定 Gray 码  <script type="math/tex">a_{n-1}…a_1a_0</script>  . 对于  <script type="math/tex">i = 0, 1, …, n-1</script>  ， 设</p>
+<script type="math/tex; mode=display">
+b_i = 0,若a_{n-1}+...+a_i是偶数\\
+b_i = 1,若a_{n-1}+...+a_i是奇数</script><p>此时，  <script type="math/tex">a_{n-1}…a_1a_0</script>  在 Gray码序表的位置和  <script type="math/tex">b_{n-1}…b_1b_0</script>  在字典序表上的位置相同。即  <script type="math/tex">a_{n-1}… a_1a_0</script>  在Gray码序表的位置是  <script type="math/tex">b_{n-1}×2^{n-1}+…+b_1×2 + b_0×2^0</script>  。</p>
+<h3 id="4-4-生成-r-子集"><a href="#4-4-生成-r-子集" class="headerlink" title="4.4 生成 r 子集"></a>4.4 生成 r 子集</h3><h4 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h4><h5 id="r-子集的字典序"><a href="#r-子集的字典序" class="headerlink" title="r 子集的字典序"></a>r 子集的字典序</h5><p>令  <script type="math/tex">S=</script> { <script type="math/tex">1, 2, …, n</script> } 由前  <script type="math/tex">n</script>  个正整数组成。</p>
+<ul>
+<li>给出 S 的元素的一个自然顺序:</li>
+</ul>
+<script type="math/tex; mode=display">
+1 < 2 < … < n</script><p>设  <script type="math/tex">A，B</script>  是  <script type="math/tex">S</script>  的两个  <script type="math/tex">r</script>  组合，若  <script type="math/tex">A\cup B</script>  \  <script type="math/tex">A\cap B</script>  中的最小整数属于A，则称 A先于B</p>
+<h5 id="组合表示为子序列"><a href="#组合表示为子序列" class="headerlink" title="组合表示为子序列"></a>组合表示为子序列</h5><p>约定  <script type="math/tex">S=</script> { <script type="math/tex">1, 2, …, n</script> } 的  <script type="math/tex">r</script>  子集为如下形式：</p>
+<script type="math/tex; mode=display">a_1 a_2 … a_r $$  , 其中  $$ 1 ≤ a_1< a_2 < … < a_r ≤ n</script><h4 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h4><p>设  <script type="math/tex">S=</script> { <script type="math/tex">1, 2,…, n</script> },  <script type="math/tex">a_1…a_r</script> 是  <script type="math/tex">S</script>  的一个  <script type="math/tex">r</script>  子集。</p>
+<ul>
+<li><p>(1) 对任意的 <script type="math/tex">1≤ i < j ≤ r-1</script> ，</p>
+<p> <script type="math/tex">a_1…a_r</script> 的以  <script type="math/tex">a_1…a_j</script>  开头的第一个后继一定先于以  <script type="math/tex">a_1…a_i</script>  开头的第一个后继（如果存在）。</p>
+</li>
+<li><p>(2) 如果  <script type="math/tex">a_r< n</script>  , 则  <script type="math/tex">a_1…a_r</script>  的直接后继为</p>
+<p>  <script type="math/tex">a_1…a_{r-1}\textcolor {red}{a_r+1}</script> 。</p>
+</li>
+</ul>
+<h4 id="定理-1"><a href="#定理-1" class="headerlink" title="定理"></a>定理</h4><h5 id="4-4-1"><a href="#4-4-1" class="headerlink" title="4.4.1"></a>4.4.1</h5><h6 id="1"><a href="#1" class="headerlink" title="(1)"></a>(1)</h6><p>设  <script type="math/tex">a_1a_2…a_r</script>  是 { <script type="math/tex">1, 2, …, n</script> } 的  <script type="math/tex">r</script>  子集。在字典序中, 第一个  <script type="math/tex">r</script>  子集是  <script type="math/tex">12…r</script> , 最后一个  <script type="math/tex">r</script> 子集是  <script type="math/tex">(n-r+1)(n-r+2) … n</script>  。  <script type="math/tex">a_1…a_{r-1}</script>  不是最后一个  <script type="math/tex">r</script>  子集。</p>
+<h6 id="2"><a href="#2" class="headerlink" title="(2)"></a>(2)</h6><p>设  <script type="math/tex">a_1a_2…a_r \neq (n-r+1)(n-r+2)…n</script>  。令  <script type="math/tex">k</script>  是满足  <script type="math/tex">a_k < n</script> 且使得  <script type="math/tex">a_k+1</script>  不同于  <script type="math/tex">a_1a_2…a_r</script>  中任一数的最大整数。那么, 在字典序中,  <script type="math/tex">a_1a_2…a_r</script>  的直接后继是：</p>
+<script type="math/tex; mode=display">
+\textcolor{blue}{a_1a_2…a_{k-1}}
+\textcolor{red}{(a_k+1)(a_k+2)…(a_k+r-k+1)}</script><h6 id="直接后继求解算法"><a href="#直接后继求解算法" class="headerlink" title="直接后继求解算法"></a>直接后继求解算法</h6><ol>
+<li><p>当  <script type="math/tex">a_i<n</script>  时  <script type="math/tex">(1≤ i ≤ r)</script>  ， 求  <script type="math/tex">a_i+1</script>  , 判断  <script type="math/tex">a_i+1</script>  是否属于{ <script type="math/tex">a_1, …, a_r</script> }；</p>
+</li>
+<li><p>找出满足  <script type="math/tex">a_i < n</script>  , 且  <script type="math/tex">a_i+1</script>  不在 {  <script type="math/tex">a_1,…, a_r</script>  }中的最大的  <script type="math/tex">i</script>  , 记为  <script type="math/tex">k</script>  ，那么， 在字典序中，  <script type="math/tex">a_1a_2…a_r</script>  的直接后继是 ：</p>
+<script type="math/tex; mode=display">
+\textcolor{blue}{a_1a_2…a_{k-1}}
+\textcolor{red}{(a_k+1)(a_k+2)…(a_k+r-k+1)}</script></li>
+</ol>
+<h4 id="字典序-r-子集的生成算法"><a href="#字典序-r-子集的生成算法" class="headerlink" title="字典序 r 子集的生成算法"></a>字典序 r 子集的生成算法</h4><h5 id="1-2-…-n-的字典序-r-子集的生成算法："><a href="#1-2-…-n-的字典序-r-子集的生成算法：" class="headerlink" title="{ 1, 2,…, n }的字典序  r  子集的生成算法："></a>{ <script type="math/tex">1, 2,…, n</script> }的字典序  <script type="math/tex">r</script>  子集的生成算法：</h5><p>从  <script type="math/tex">12…r</script>  开始，逐个列出直接后继，直至得到  <script type="math/tex">(n-r+1)(n-r+2)…n</script> </p>
+<ol>
+<li>初始：  <script type="math/tex">a_1a_2…a_r＝12…r</script> ；</li>
+<li>当  <script type="math/tex">a_1a_2…a_r \neq(n-r+1)(n-r+2)…n</script>  时，进行以下操作：<br>(1) 确定最大整数k, 使得 <script type="math/tex">a_k+1\leq n，且 a_k+1\neq a_i (i=1,2,…,r)</script> ；<br>(2) 用  <script type="math/tex">a_1a_2…a_{k-1} (a_k+1)…(a_k+r-k+1)</script>  替换   <script type="math/tex">a_1a_2…a_r</script>  .</li>
+</ol>
+<h4 id="定理-2"><a href="#定理-2" class="headerlink" title="定理"></a>定理</h4><h5 id="4-2-2"><a href="#4-2-2" class="headerlink" title="4.2.2"></a>4.2.2</h5><p> {  <script type="math/tex">1, 2,…, n</script>  }的  <script type="math/tex">r</script>  子集  <script type="math/tex">a_1a_2…a_r</script>  出现在 { <script type="math/tex">1, 2, …, n</script> }的  <script type="math/tex">r</script>  子集中的字典序中的位置号为：</p>
+<script type="math/tex; mode=display">
+{{n}\choose{r}}-
+{{n-a_1}\choose{r}}-
+{{n-a_2}\choose{r-1}}...-
+{{n-a_{r-1}}\choose{2}}-
+{{n-a_r}\choose{1}}</script><h2 id="第5章-二项式系数"><a href="#第5章-二项式系数" class="headerlink" title="第5章 二项式系数"></a>第5章 二项式系数</h2><h4 id="组合证明"><a href="#组合证明" class="headerlink" title="组合证明"></a>组合证明</h4><p>是一种依靠计数原理构建代数事实的证明方法</p>
+<p>基本框架：</p>
+<ol>
+<li>定义一个集合  <script type="math/tex">S</script>  ；</li>
+<li>通过一种计数方式得出  <script type="math/tex">|S|= n</script>  ；</li>
+<li>通过另一种计数方式得出  <script type="math/tex">|S|= m</script>  ；</li>
+<li>得出结论  <script type="math/tex">n = m</script> 。</li>
+</ol>
+<h4 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h4><p>令  <script type="math/tex">n</script>  是一个正整数, 那么对于所有的  <script type="math/tex">x, y</script>  有：</p>
+<script type="math/tex; mode=display">
+(x+y)^{n}= \sum_{k=0}^{n} {n\choose k}x^{n-k}y^{k}</script><p>其中：</p>
+<script type="math/tex; mode=display">
+{n\choose k}= \frac {n!}{k!(n-k)!}=\frac {n(n-1)...(n-k+1)}{k(k-1)...1}</script><h3 id="5-1-帕斯卡三角形"><a href="#5-1-帕斯卡三角形" class="headerlink" title="5.1 帕斯卡三角形"></a>5.1 帕斯卡三角形</h3><h4 id="定理-3"><a href="#定理-3" class="headerlink" title="定理"></a>定理</h4><h5 id="5-1-1"><a href="#5-1-1" class="headerlink" title="5.1.1"></a>5.1.1</h5><p>( Pascal 公式) 对于满足  <script type="math/tex">1\leq k \leq n</script>  的所有整数  <script type="math/tex">k</script>  和  <script type="math/tex">n</script>  , 有：</p>
+<script type="math/tex; mode=display">
+{n\choose k}={n-1\choose k}+{n-1\choose k-1}</script><h3 id="5-2-二项式定理"><a href="#5-2-二项式定理" class="headerlink" title="5.2 二项式定理"></a>5.2 二项式定理</h3><h4 id="定理-4"><a href="#定理-4" class="headerlink" title="定理"></a>定理</h4><h5 id="5-2-1"><a href="#5-2-1" class="headerlink" title="5.2.1"></a>5.2.1</h5><p>令  <script type="math/tex">n</script>  是一个正整数, 那么对于所有的  <script type="math/tex">x, y</script>  有：</p>
+<script type="math/tex; mode=display">
+(x+y)^{n}= \sum_{k=0}^{n} {n\choose k}x^{n-k}y^{k}</script><h5 id="二项式系数的其他等式"><a href="#二项式系数的其他等式" class="headerlink" title="二项式系数的其他等式"></a>二项式系数的其他等式</h5><script type="math/tex; mode=display">
+k{n \choose k}=n{n-1 \choose k-1}</script><h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><h5 id="证明等式的方法"><a href="#证明等式的方法" class="headerlink" title="证明等式的方法"></a>证明等式的方法</h5><ul>
+<li>利用已有等式：帕斯卡公式</li>
+<li>求导法、积分法</li>
+<li>组合推理法</li>
+</ul>
+<h4 id="性质-1"><a href="#性质-1" class="headerlink" title="性质"></a>性质</h4><h5 id="组合推理路径数"><a href="#组合推理路径数" class="headerlink" title="组合推理路径数"></a>组合推理路径数</h5><p>从  <script type="math/tex">(0,0)</script>  点到  <script type="math/tex">(m,n)</script>  点，共有  <script type="math/tex">{m+n \choose m} = {m+n \choose n}</script>  种路径 </p>
+<h4 id="组合定义扩展"><a href="#组合定义扩展" class="headerlink" title="组合定义扩展"></a>组合定义扩展</h4><script type="math/tex; mode=display">
+{n\choose k}=
+\frac {n!}{k!(n-k)!}=
+\frac {n(n-1)...(n-k+1)}{k(k-1)...1}</script><p>扩展：</p>
+<ul>
+<li><script type="math/tex; mode=display">\textcolor{red}{n}扩展为\textcolor{red}{任意实数}</script></li>
+<li><script type="math/tex; mode=display">\textcolor{blue}{k}扩展为\textcolor{blue}{任意整数}</script></li>
+</ul>
+<p>令  <script type="math/tex">\textcolor{red}{r}</script>  可取 <script type="math/tex">\textcolor{red}{任意实数}</script> ,  <script type="math/tex">\textcolor{blue}k</script>  可取 <script type="math/tex">\textcolor{blue}{任意整数（正的、负的或零）}</script> ,<br>定义二项式系数  <script type="math/tex">r\choose k</script>  为：</p>
+<script type="math/tex; mode=display">
+{r\choose k}=\left\{ 
+\begin{array}{rcl}
+x & = & \frac{r(r-1)...{r-k+1}}{k!} 
+&, 若k \geq 1\\ 
+y & = & 1 
+&, 若k = 0\\ 
+z & = & 0 
+&, 若k \leq -1 
+\end{array}
+\right.</script><ul>
+<li><p>扩展定义  <script type="math/tex">n\choose k</script>  仍使Pascal公式成立</p>
+</li>
+<li><p>令  <script type="math/tex">\textcolor{red}{r}</script>  可取 <script type="math/tex">\textcolor{red}{任意实数}</script> ,  <script type="math/tex">\textcolor{blue}k</script>  可取 <script type="math/tex">\textcolor{blue}{任意整数}</script> ，仍有：</p>
+<script type="math/tex; mode=display">
+{r\choose k}={r-1\choose k}+{r-1\choose k-1}\\
+k{r \choose k}=r{r-1 \choose k-1}</script></li>
+</ul>
+<h3 id="5-3-二项式系数的单峰性"><a href="#5-3-二项式系数的单峰性" class="headerlink" title="5.3 二项式系数的单峰性"></a>5.3 二项式系数的单峰性</h3><h4 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h4><h5 id="单峰性"><a href="#单峰性" class="headerlink" title="单峰性"></a>单峰性</h5><p>设序列  <script type="math/tex">s_0,s_1,s_2,…,s_n</script>  , 若存在一个整数  <script type="math/tex">t</script>  ,  <script type="math/tex">0 \leq t \leq n</script>  , 使得:</p>
+<script type="math/tex; mode=display">
+s_0 \leq s_1 \leq s_2 \leq ... \leq s_t，
+s_t \geq s_{t+1} \geq s_{t+2} \geq ... \geq s_n</script><p>那么, 称序列是 <script type="math/tex">\textcolor{red}{单峰}</script> 的。</p>
+<h6 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h6><ol>
+<li><script type="math/tex">s_t</script>  一定是序列中的最大数</li>
+<li><script type="math/tex">t</script>  不一定是唯一的</li>
+</ol>
+<h5 id="取整"><a href="#取整" class="headerlink" title="取整"></a>取整</h5><p>设  <script type="math/tex">x</script>  为任意实数, 令  <script type="math/tex">\lceil x \rceil</script>  表示大于或等于  <script type="math/tex">x</script>  的最小整数,称强取整(上取整);  <script type="math/tex">\lfloor x \rfloor</script>  表示小于或等于  <script type="math/tex">x</script>  的最大整数,称弱取整(下取整).</p>
+<h4 id="定理-5"><a href="#定理-5" class="headerlink" title="定理"></a>定理</h4><h5 id="5-3-1"><a href="#5-3-1" class="headerlink" title="5.3.1"></a>5.3.1</h5><p>令  <script type="math/tex">n</script>  为正整数, 二项式系数序列是 <script type="math/tex">\textcolor{red}{单峰序列}</script> ,其中：</p>
+<ul>
+<li>若  <script type="math/tex">n</script>  是偶数：</li>
+</ul>
+<script type="math/tex; mode=display">
+{n\choose0}<{n\choose1}<...<{n\choose n/2}，
+{n\choose n/2}>...>{n\choose n-1}>{n\choose n}</script><ul>
+<li>若  <script type="math/tex">n</script>  是奇数：</li>
+</ul>
+<script type="math/tex; mode=display">
+{n\choose0}<{n\choose1}<...<{n\choose (n-1)/2}，
+{n\choose (n+1)/2}>...>{n\choose n-1}>{n\choose n}</script><h5 id="5-3-2"><a href="#5-3-2" class="headerlink" title="5.3.2"></a>5.3.2</h5><p>二项式系数  <script type="math/tex">{n\choose 0},{n\choose 1},...,{n\choose n}</script>  的最大者是：</p>
+<ul>
+<li><script type="math/tex">{n\choose \lfloor n/2 \rfloor} = {n\choose \lceil n/2 \rceil} = {n\choose n/2 }</script>  (  <script type="math/tex">n</script>  为偶数时)</li>
+<li><script type="math/tex">{n\choose \lfloor n/2 \rfloor} = {n\choose \lceil n/2 \rceil} = {n\choose (n-1)/2 } == {n\choose (n+1)/2 }</script>  (  <script type="math/tex">n</script>  为奇数时)</li>
+</ul>
+<h4 id="扩展-1"><a href="#扩展-1" class="headerlink" title="扩展 1"></a>扩展 1</h4><ul>
+<li>由集合的子集的包含关系定义的链与反链</li>
+<li>由包含关系推广到一般偏序</li>
+</ul>
+<h5 id="定义-3"><a href="#定义-3" class="headerlink" title="定义"></a>定义</h5><h6 id="反链"><a href="#反链" class="headerlink" title="反链"></a>反链</h6><p>令  <script type="math/tex">S</script>  是  <script type="math/tex">n</script>  个元素的集合，  <script type="math/tex">S</script>  上的一条反链是  <script type="math/tex">S</script>  的子集的一个集合  <script type="math/tex">A</script>  ，其中  <script type="math/tex">A</script>  中的子集不相互包含。</p>
+<h6 id="链"><a href="#链" class="headerlink" title="链"></a>链</h6><p>令  <script type="math/tex">S</script>  是  <script type="math/tex">n</script>  个元素的集合,   <script type="math/tex">S</script>  上的一条链是  <script type="math/tex">S</script>  的子集的集合  <script type="math/tex">C</script>   ，其中对于  <script type="math/tex">C</script>  中的每一对子集，总有一个包含在另一个之中：<br>对任意  <script type="math/tex">S_1,S_2\in C</script>  ，且  <script type="math/tex">S1 \neq S2</script>  ，则  <script type="math/tex">S1 \subset S2</script>  或者  <script type="math/tex">S2 \subset S1</script> </p>
+<h6 id="最大链"><a href="#最大链" class="headerlink" title="最大链"></a>最大链</h6><p>令  <script type="math/tex">S</script>  是  <script type="math/tex">n</script>  个元素的集合,  <script type="math/tex">S</script>  上的最大链  <script type="math/tex">C</script>  定义为： <script type="math/tex">C = {A_0, A_1, …, A_n}</script> ，<br>满足:<br>(1)  <script type="math/tex">A_0= Φ \subset A_1 \subset A2…\subset An</script> , 且<br>(2)  <script type="math/tex">| A_i | = i (i =1, …, n)</script> </p>
+<h5 id="方法-1"><a href="#方法-1" class="headerlink" title="方法"></a>方法</h5><h6 id="构造反链"><a href="#构造反链" class="headerlink" title="构造反链"></a>构造反链</h6><p>令  <script type="math/tex">S</script>  为  <script type="math/tex">n</script>  个元素的集合，一个构造反链的方法：</p>
+<p>选择一个整数  <script type="math/tex">k \leq n</script>  ，取  <script type="math/tex">A_k</script>  为  <script type="math/tex">S</script>  所有的  <script type="math/tex">k</script>  子集的集合。该方法构成的反链最多含有  <script type="math/tex">n \choose \lfloor n/2 \rfloor</script>  个子集。</p>
+<h6 id="构造最大链"><a href="#构造最大链" class="headerlink" title="构造最大链"></a>构造最大链</h6><ol>
+<li><script type="math/tex; mode=display">A_0= Φ</script></li>
+<li><p>从  <script type="math/tex">S</script>  中选择一个元素  <script type="math/tex">i_1</script>  , 形成  <script type="math/tex">A_1=</script> { <script type="math/tex">i_1</script> }.</p>
+</li>
+<li><p>选择一个元素  <script type="math/tex">i_2 \neq i_1</script> , 形成  <script type="math/tex">A_2=</script> { <script type="math/tex">i_1, i_2</script> }.</p>
+</li>
+<li><p>选择一个元素  <script type="math/tex">i_3 \neq i_1, i_2</script>  形成  <script type="math/tex">A_3=</script> { <script type="math/tex">i_1, i_2, i_3</script> }.</p>
+<p> …</p>
+<p>k. 选择一个元素  <script type="math/tex">i_k \neq i_1, i_2,…, i_{k-1}</script>  形成  <script type="math/tex">A_k=</script> { <script type="math/tex">i_1, i_2, …, i_k</script> }.<br> …<br>n. 选择一个元素  <script type="math/tex">i_n \neq i+1,…, i+{n-1}</script>  形成  <script type="math/tex">An=</script> { <script type="math/tex">i_1, i_2, …, i_n</script> }.</p>
+</li>
+</ol>
+<ul>
+<li>S上的最大链与 S 的排列一一对应</li>
+<li>最大链的数目为  <script type="math/tex">n!</script> </li>
+</ul>
+<h5 id="链与反链的关系"><a href="#链与反链的关系" class="headerlink" title="链与反链的关系"></a>链与反链的关系</h5><ul>
+<li><script type="math/tex">S</script>  上的一条链最多只能包含  <script type="math/tex">S</script>  的任意一条反链中的一个子集</li>
+<li><script type="math/tex">S</script>  上的一条反链最多只能包含  <script type="math/tex">S</script>  的任意一条链中的一个子集</li>
+</ul>
+<h5 id="定理-6"><a href="#定理-6" class="headerlink" title="定理"></a>定理</h5><h6 id="5-3-3"><a href="#5-3-3" class="headerlink" title="5.3.3"></a>5.3.3</h6><p>设  <script type="math/tex">S</script>  为  <script type="math/tex">n</script>  个元素的集合，则  <script type="math/tex">S</script>  上的一条反链最多包含  <script type="math/tex">n\choose \lfloor n/2 \rfloor</script>  个子集</p>
+<h6 id="更强的结果"><a href="#更强的结果" class="headerlink" title="更强的结果"></a>更强的结果</h6><p>设  <script type="math/tex">S</script>  是为  <script type="math/tex">n</script>  个元素的集合，</p>
+<ul>
+<li>如果n是偶数，则大小为  <script type="math/tex">n\choose \lfloor n/2 \rfloor</script>  的唯一的反链是所有  <script type="math/tex">n/2</script>  子集的反链</li>
+<li>如果n是奇数，则大小为  <script type="math/tex">n\choose \lfloor n/2 \rfloor</script>  的反链有两个：<ul>
+<li>所有  <script type="math/tex">(n-1)/2</script>  子集构成的反链；</li>
+<li>所有  <script type="math/tex">(n+1)/2</script>  子集构成的反链。</li>
+</ul>
+</li>
+</ul>
+<h4 id="扩展-2"><a href="#扩展-2" class="headerlink" title="扩展 2"></a>扩展 2</h4><ul>
+<li>集合的包含关系是偏序关系</li>
+<li>把链、反链的概念推广到偏序集</li>
+</ul>
+<p>令  <script type="math/tex">( X,\leq )</script>  是一个有限偏序集,</p>
+<ul>
+<li>链是  <script type="math/tex">X</script>  的一个子集, 其中任意两个元素都是可比的,</li>
+<li><p>反链是  <script type="math/tex">X</script>  的一个子集, 其中任意两个元素都不可比.</p>
+</li>
+<li><p>极小元：  <script type="math/tex">a</script>  是偏序集的极小元当且仅当  <script type="math/tex">X</script>  中不存在<br>满足  <script type="math/tex">x < a</script>  的元素  <script type="math/tex">x</script>  </p>
+<ul>
+<li><script type="math/tex">X</script>  的所有极小元构成的子集是反链</li>
+</ul>
+</li>
+<li>极大元：  <script type="math/tex">av 是偏序集的极大元当且仅当  `$ X</script>  中不存在<br>满足  <script type="math/tex">x > a</script>  的元素  <script type="math/tex">x</script> <ul>
+<li><script type="math/tex">X</script>  的所有极大元构成的子集也是反链</li>
+</ul>
+</li>
+</ul>
+<h5 id="定理-7"><a href="#定理-7" class="headerlink" title="定理"></a>定理</h5><h6 id="5-6-1"><a href="#5-6-1" class="headerlink" title="5.6.1"></a>5.6.1</h6><p>令  <script type="math/tex">( X, \leq )</script>  是一个有限偏序集, 并令  <script type="math/tex">r</script>  是最大链的大小, 则  <script type="math/tex">X</script>  可以被划分成  <script type="math/tex">r</script>  个反链，但不能划分为少于  <script type="math/tex">r</script>  个的反链。</p>
+<h6 id="5-6-2"><a href="#5-6-2" class="headerlink" title="5.6.2"></a>5.6.2</h6><p>令  <script type="math/tex">(X, \leq)</script>  是一个有限偏序集, 并令  <script type="math/tex">m</script>  是最大反链的大小, 则  <script type="math/tex">X</script>  可以被划分成  <script type="math/tex">m</script>  个链，但不能划分成少于  <script type="math/tex">m</script>  个链</p>
+<h5 id="定义-4"><a href="#定义-4" class="headerlink" title="定义"></a>定义</h5><h6 id="对称链划分"><a href="#对称链划分" class="headerlink" title="对称链划分"></a>对称链划分</h6><p>设  <script type="math/tex">S=</script> { <script type="math/tex">1, 2,…, n</script> }， 如果  <script type="math/tex">S</script>  的幂集  <script type="math/tex">P(S)</script>  的一个链划分满足以下两个条件，则称其是一个对称链划分：<br>(1) 链中每一个子集比它前面的子集的元素个数多  <script type="math/tex">1</script>  ；<br>(2) 链中第一个子集与最后一个子集的大小和等于  <script type="math/tex">n</script>  。<br>如果这个链只含一个子集，那么这个子集既是第一个子集也是最后一个子集，所以其大小为  <script type="math/tex">n/2</script>  (此时，  <script type="math/tex">n</script>  为偶数)</p>
+<h5 id="方法-2"><a href="#方法-2" class="headerlink" title="方法"></a>方法</h5><h6 id="对称链划分的构造方法"><a href="#对称链划分的构造方法" class="headerlink" title="对称链划分的构造方法"></a>对称链划分的构造方法</h6><p><strong>基本思路</strong>：将  <script type="math/tex">S</script>  的所有子集划分为  <script type="math/tex">{n\choose \lfloor n/2 \rfloor}</script>  个对称链。令  <script type="math/tex">S=</script> { <script type="math/tex">1, 2, …, n</script> } ，对  <script type="math/tex">n</script>  进行归纳构造：</p>
+<p>对于  <script type="math/tex">n=k</script>  时的每一个含多个子集的链  <script type="math/tex">E</script> ，可构造  <script type="math/tex">n=k+1</script>  时的两个链：</p>
+<ol>
+<li>对  <script type="math/tex">E</script>  增加如下子集：在  <script type="math/tex">E</script>  的最后一个子集中增加  <script type="math/tex">k+1</script>  ，构成一个新子集</li>
+<li>把  <script type="math/tex">k+1</script>  加到  <script type="math/tex">E</script>  中除最后一个子集之外的所有子集，并删除最后一个子集</li>
+</ol>
+<p><strong>注意：</strong></p>
+<ul>
+<li>对称链划分中的每一个链必须正好含有一个  <script type="math/tex">\lfloor n/2 \rfloor</script>  子集（也正好含有一个  <script type="math/tex">\lceil n/2 \rceil</script>  子集）</li>
+<li>对称链划分中的链的个数等于： <script type="math/tex">{n\choose \lfloor n/2 \rfloor }= {n \choose \lceil \lceil n/2 \rceil \rceil}</script> </li>
+</ul>
+<h3 id="5-4-多项式定理"><a href="#5-4-多项式定理" class="headerlink" title="5.4 多项式定理"></a>5.4 多项式定理</h3><h4 id="定义-5"><a href="#定义-5" class="headerlink" title="定义"></a>定义</h4><ul>
+<li>把二项式定理  <script type="math/tex">(x+y)^n</script>  扩展到  <script type="math/tex">(x_1+x_2+…+x_t)^n</script> </li>
+<li>多项式系数： <script type="math/tex">{n\choose n_1n_2...n_t}={\frac{n!}{n_1!n_2!...n_t!}}</script> , 其中  <script type="math/tex">n_1, n_2, … n_t</script>  是非负整数，且  <script type="math/tex">n_1+n_2+…+n_t=n</script> </li>
+<li><ul>
+<li>表示重数分别为  <script type="math/tex">n_1, n_2, … n_t</script>  的  <script type="math/tex">t</script>  种不同类型物品的多重集的排列数</li>
+<li>二项式系数：  <script type="math/tex">{n\choose r}={\frac {n!}{r!(n-r)!}}</script>  , 可记为  <script type="math/tex">n\choose r\quad n-r</script> </li>
+</ul>
+</li>
+</ul>
+<h4 id="定理-8"><a href="#定理-8" class="headerlink" title="定理"></a>定理</h4><h5 id="帕斯卡公式"><a href="#帕斯卡公式" class="headerlink" title="帕斯卡公式"></a>帕斯卡公式</h5><ul>
+<li>二项式系数的帕斯卡公式 </li>
+</ul>
+<script type="math/tex; mode=display">
+{n\choose k\quad n-k}=
+{n-1\choose k\quad n-k-1}+
+{n-1\choose k-1\quad n-k}</script><ul>
+<li>多项式系数的帕斯卡公式</li>
+</ul>
+<script type="math/tex; mode=display">
+{n\choose n_1\quad n_2\quad ... n_t}=
+{n-1\choose n_1-1\quad n_2\quad ... n_t}+
+{n-1\choose n_1\quad n_2-1\quad ... n_t}+
+...+
+{n-1\choose n_1\quad n_2\quad ... n_t-1}</script><h5 id="5-4-1"><a href="#5-4-1" class="headerlink" title="5.4.1"></a>5.4.1</h5><p>设 n是正整数。对于所有的  <script type="math/tex">x_1, x_2,…, x_t</script>  , 有</p>
+<script type="math/tex; mode=display">
+(x_1+x_2+...+x_t)^n=\Sigma{n\choose n_1\quad n_2\quad ... n_t}
+x_1^{n_1}x_2^{n_2}...x_t^{n_t}</script><p>其中求和是对  <script type="math/tex">n_1+n_2+…+n_t=n</script>  的所有非负整数解  <code>$ n_1, 
+n_2, …, n_t $</code>  进行的。</p>
+<h3 id="牛顿二项式定理"><a href="#牛顿二项式定理" class="headerlink" title="牛顿二项式定理"></a>牛顿二项式定理</h3><h4 id="定理-9"><a href="#定理-9" class="headerlink" title="定理"></a>定理</h4><h5 id="5-5-1"><a href="#5-5-1" class="headerlink" title="5.5.1"></a>5.5.1</h5><p>令  <script type="math/tex">a</script>  是一个实数, 对于所有满足  <script type="math/tex">0 \leq |x|< |y|</script>  的变量  <script type="math/tex">x , y</script>  有</p>
+<script type="math/tex; mode=display">
+(x+y)^{\alpha}=\Sigma^{\infty}_{k=0}{\alpha \choose k}x^ky^{\alpha -k}</script><p>其中， <script type="math/tex">{\alpha\choose k} = \frac{\alpha(\alpha -1)...(\alpha - k +1)}{k!}</script> </p>
+<p>如果  <script type="math/tex">\alpha</script>  为整数，则就是二项式定理</p>
+<h6 id="等价形式"><a href="#等价形式" class="headerlink" title="等价形式"></a>等价形式</h6><p>对满足  <script type="math/tex">|z|<1</script>  的任意  <script type="math/tex">z</script>  ，有  <script type="math/tex">(1+z)^{-n}=\Sigma^{\infty}_{k=0}(-1)^k{n+k-1 \choose k}z^k</script>  </p>
+<h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h4><h5 id="求解任意精度平方根"><a href="#求解任意精度平方根" class="headerlink" title="求解任意精度平方根"></a>求解任意精度平方根</h5><p>令  <script type="math/tex">\alpha =1/2</script>  ，有  <script type="math/tex">{\alpha \choose 0}=1</script>  ，对于  <script type="math/tex">k>0</script>  有：</p>
+<script type="math/tex; mode=display">
+{\alpha \choose k}={1/2 \choose k}=\frac{(-1)^{k-1}}{k\times 2^{2k-1}}{2k-2 \choose k-1}</script><p>因此，对  <script type="math/tex">|z|<1</script>  ，有：</p>
+<script type="math/tex; mode=display">
+\sqrt{1+z} = (1+z)^{1/2} = 1+\sum^{\infty}_{k=1}\frac{(-1)^{k-1}}{k \times 2^{2k-1}}{2k-2 \choose k-1}z^k\\
+=1+\frac{1}{2}z-
+\frac{1}{2\times2^3}{2\choose1}z^2+
+\frac{1}{3\times2^5}{4\choose2}z^3-
+...</script><p>(详细证明见ppt)</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a target="_blank" rel="noopener" href="https://github.com/Cx330-502">Cx330-502</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://cx330-502.github.io/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B02/">https://cx330-502.github.io/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B02/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://cx330-502.github.io" target="_blank">52Hz的鲸歌</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">组合数学</a><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a></div><div class="post_share"><div class="social-share" data-image="/files_/pics/default_pics/1.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/" title="组合数学笔记(一)"><img class="cover" src="/files_/pics/default_pics/5.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">组合数学笔记(一)</div></div></a></div><div class="next-post pull-right"><a href="/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B03/" title="组合数学笔记(三)"><img class="cover" src="/files_/pics/default_pics/2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">组合数学笔记(三)</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/" title="组合数学笔记(一)"><img class="cover" src="/files_/pics/default_pics/5.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-05</div><div class="title">组合数学笔记(一)</div></div></a></div><div><a href="/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B03/" title="组合数学笔记(三)"><img class="cover" src="/files_/pics/default_pics/2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-05</div><div class="title">组合数学笔记(三)</div></div></a></div><div><a href="/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B04/" title="组合数学笔记(四)"><img class="cover" src="/files_/pics/default_pics/2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-05</div><div class="title">组合数学笔记(四)</div></div></a></div><div><a href="/2023/09/07/2023-09/2023-09-07-%E7%A7%91%E7%A0%94%E8%AF%BE%E5%A0%82python/" title="Python基础架构"><img class="cover" src="/files_/pics/default_pics/1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-07</div><div class="title">Python基础架构</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/files_/pics/avatars/1.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Cx330-502</div><div class="author-info__description">我与春风皆过客，你携秋水揽星河</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Cx330-502"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Cx330-502" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1175963382zx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">52Hz的鲸歌</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6"><span class="toc-text">组合数学</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC4%E7%AB%A0-%E7%94%9F%E6%88%90%E6%8E%92%E5%88%97%E5%92%8C%E7%BB%84%E5%90%88"><span class="toc-text">第4章 生成排列和组合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E7%94%9F%E6%88%90%E6%8E%92%E5%88%97"><span class="toc-text">4.1 生成排列</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95"><span class="toc-text">递归生成算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%82%BB%E4%BD%8D%E5%AF%B9%E6%8D%A2%E7%AE%97%E6%B3%95"><span class="toc-text">邻位对换算法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%8E%92%E5%BA%8F%E4%B8%AD%E7%9A%84%E9%80%86%E5%BA%8F"><span class="toc-text">4.2 排序中的逆序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E7%94%9F%E6%88%90%E7%BB%84%E5%90%88"><span class="toc-text">4.3 生成组合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%97%E6%B3%951%EF%BC%9A%E5%AD%97%E5%85%B8%E5%BA%8F%E7%9A%84%E7%BB%84%E5%90%88%E7%94%9F%E6%88%90"><span class="toc-text">算法1：字典序的组合生成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%97%E6%B3%952%EF%BC%9A%E5%8F%91%E5%B0%84Gray%E7%A0%81%E5%BA%8F%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95"><span class="toc-text">算法2：发射Gray码序生成算法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%89%B9%E7%82%B9"><span class="toc-text">特点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-text">定义</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#n%E9%98%B6Gray%E7%A0%81"><span class="toc-text">n阶Gray码</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AFGray%E7%A0%81"><span class="toc-text">循环Gray码</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#n%E9%98%B6Gray%E5%8F%8D%E5%B0%84%E7%A0%81"><span class="toc-text">n阶Gray反射码</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AE%97%E6%B3%95"><span class="toc-text">算法</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%80%90%E6%AC%A1%E6%B3%95"><span class="toc-text">逐次法</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%9A%E7%90%86"><span class="toc-text">定理</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E5%BA%8F"><span class="toc-text">字典序</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84-Gray-%E7%A0%81"><span class="toc-text">反射 Gray 码</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%A1%AE%E5%AE%9A-n-%E5%85%83%E7%BB%84%E5%9C%A8-Gray-%E7%A0%81%E5%BA%8F%E8%A1%A8%E7%9A%84%E5%87%86%E7%A1%AE%E4%BD%8D%E7%BD%AE"><span class="toc-text">确定 n 元组在 Gray 码序表的准确位置</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-%E7%94%9F%E6%88%90-r-%E5%AD%90%E9%9B%86"><span class="toc-text">4.4 生成 r 子集</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89-1"><span class="toc-text">定义</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#r-%E5%AD%90%E9%9B%86%E7%9A%84%E5%AD%97%E5%85%B8%E5%BA%8F"><span class="toc-text">r 子集的字典序</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E8%A1%A8%E7%A4%BA%E4%B8%BA%E5%AD%90%E5%BA%8F%E5%88%97"><span class="toc-text">组合表示为子序列</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%A7%E8%B4%A8"><span class="toc-text">性质</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E7%90%86-1"><span class="toc-text">定理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#4-4-1"><span class="toc-text">4.4.1</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1"><span class="toc-text">(1)</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2"><span class="toc-text">(2)</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E5%90%8E%E7%BB%A7%E6%B1%82%E8%A7%A3%E7%AE%97%E6%B3%95"><span class="toc-text">直接后继求解算法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E5%BA%8F-r-%E5%AD%90%E9%9B%86%E7%9A%84%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95"><span class="toc-text">字典序 r 子集的生成算法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-%E2%80%A6-n-%E7%9A%84%E5%AD%97%E5%85%B8%E5%BA%8F-r-%E5%AD%90%E9%9B%86%E7%9A%84%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95%EF%BC%9A"><span class="toc-text">{ 1, 2,…, n }的字典序  r  子集的生成算法：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E7%90%86-2"><span class="toc-text">定理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#4-2-2"><span class="toc-text">4.2.2</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC5%E7%AB%A0-%E4%BA%8C%E9%A1%B9%E5%BC%8F%E7%B3%BB%E6%95%B0"><span class="toc-text">第5章 二项式系数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E8%AF%81%E6%98%8E"><span class="toc-text">组合证明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%AE%9A%E7%90%86"><span class="toc-text">二项式定理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E5%B8%95%E6%96%AF%E5%8D%A1%E4%B8%89%E8%A7%92%E5%BD%A2"><span class="toc-text">5.1 帕斯卡三角形</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E7%90%86-3"><span class="toc-text">定理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#5-1-1"><span class="toc-text">5.1.1</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%AE%9A%E7%90%86"><span class="toc-text">5.2 二项式定理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E7%90%86-4"><span class="toc-text">定理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#5-2-1"><span class="toc-text">5.2.1</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8C%E9%A1%B9%E5%BC%8F%E7%B3%BB%E6%95%B0%E7%9A%84%E5%85%B6%E4%BB%96%E7%AD%89%E5%BC%8F"><span class="toc-text">二项式系数的其他等式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-text">方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AF%81%E6%98%8E%E7%AD%89%E5%BC%8F%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">证明等式的方法</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%A7%E8%B4%A8-1"><span class="toc-text">性质</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E6%8E%A8%E7%90%86%E8%B7%AF%E5%BE%84%E6%95%B0"><span class="toc-text">组合推理路径数</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E5%AE%9A%E4%B9%89%E6%89%A9%E5%B1%95"><span class="toc-text">组合定义扩展</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E4%BA%8C%E9%A1%B9%E5%BC%8F%E7%B3%BB%E6%95%B0%E7%9A%84%E5%8D%95%E5%B3%B0%E6%80%A7"><span class="toc-text">5.3 二项式系数的单峰性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89-2"><span class="toc-text">定义</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8D%95%E5%B3%B0%E6%80%A7"><span class="toc-text">单峰性</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc-text">注意</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%96%E6%95%B4"><span class="toc-text">取整</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E7%90%86-5"><span class="toc-text">定理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#5-3-1"><span class="toc-text">5.3.1</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-3-2"><span class="toc-text">5.3.2</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%A9%E5%B1%95-1"><span class="toc-text">扩展 1</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89-3"><span class="toc-text">定义</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%8F%8D%E9%93%BE"><span class="toc-text">反链</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%93%BE"><span class="toc-text">链</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E9%93%BE"><span class="toc-text">最大链</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B9%E6%B3%95-1"><span class="toc-text">方法</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%8F%8D%E9%93%BE"><span class="toc-text">构造反链</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E6%9C%80%E5%A4%A7%E9%93%BE"><span class="toc-text">构造最大链</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%93%BE%E4%B8%8E%E5%8F%8D%E9%93%BE%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">链与反链的关系</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%9A%E7%90%86-6"><span class="toc-text">定理</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#5-3-3"><span class="toc-text">5.3.3</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%9B%B4%E5%BC%BA%E7%9A%84%E7%BB%93%E6%9E%9C"><span class="toc-text">更强的结果</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%A9%E5%B1%95-2"><span class="toc-text">扩展 2</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%9A%E7%90%86-7"><span class="toc-text">定理</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#5-6-1"><span class="toc-text">5.6.1</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#5-6-2"><span class="toc-text">5.6.2</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89-4"><span class="toc-text">定义</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AF%B9%E7%A7%B0%E9%93%BE%E5%88%92%E5%88%86"><span class="toc-text">对称链划分</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B9%E6%B3%95-2"><span class="toc-text">方法</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AF%B9%E7%A7%B0%E9%93%BE%E5%88%92%E5%88%86%E7%9A%84%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="toc-text">对称链划分的构造方法</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%AE%9A%E7%90%86"><span class="toc-text">5.4 多项式定理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89-5"><span class="toc-text">定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E7%90%86-8"><span class="toc-text">定理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B8%95%E6%96%AF%E5%8D%A1%E5%85%AC%E5%BC%8F"><span class="toc-text">帕斯卡公式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-4-1"><span class="toc-text">5.4.1</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%9B%E9%A1%BF%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%AE%9A%E7%90%86"><span class="toc-text">牛顿二项式定理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E7%90%86-9"><span class="toc-text">定理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#5-5-1"><span class="toc-text">5.5.1</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%AD%89%E4%BB%B7%E5%BD%A2%E5%BC%8F"><span class="toc-text">等价形式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BA%94%E7%94%A8"><span class="toc-text">应用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B1%82%E8%A7%A3%E4%BB%BB%E6%84%8F%E7%B2%BE%E5%BA%A6%E5%B9%B3%E6%96%B9%E6%A0%B9"><span class="toc-text">求解任意精度平方根</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/11/11/2023-11/2023-11-11-llvm%E4%B8%AD%E9%97%B4%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90-%E8%B7%B3%E8%BD%AC/" title="LLVM 中间代码生成 跳转"><img src="/files_/pics/default_pics/5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LLVM 中间代码生成 跳转"/></a><div class="content"><a class="title" href="/2023/11/11/2023-11/2023-11-11-llvm%E4%B8%AD%E9%97%B4%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90-%E8%B7%B3%E8%BD%AC/" title="LLVM 中间代码生成 跳转">LLVM 中间代码生成 跳转</a><time datetime="2023-11-11T15:48:17.000Z" title="发表于 2023-11-11 23:48:17">2023-11-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/11/2023-10/2023-10-11-CPP%E5%A4%B4%E6%96%87%E4%BB%B6%E4%BE%9D%E8%B5%96%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/" title="Python CPP头文件依赖分析工具"><img src="/files_/pics/default_pics/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python CPP头文件依赖分析工具"/></a><div class="content"><a class="title" href="/2023/10/11/2023-10/2023-10-11-CPP%E5%A4%B4%E6%96%87%E4%BB%B6%E4%BE%9D%E8%B5%96%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/" title="Python CPP头文件依赖分析工具">Python CPP头文件依赖分析工具</a><time datetime="2023-10-11T05:53:39.000Z" title="发表于 2023-10-11 13:53:39">2023-10-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/11/2023-10/2023-10-11-%E6%8E%92%E7%8F%AD%E5%B7%A5%E5%85%B7/" title="Python 排班工具"><img src="/files_/pics/default_pics/3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python 排班工具"/></a><div class="content"><a class="title" href="/2023/10/11/2023-10/2023-10-11-%E6%8E%92%E7%8F%AD%E5%B7%A5%E5%85%B7/" title="Python 排班工具">Python 排班工具</a><time datetime="2023-10-11T05:46:38.000Z" title="发表于 2023-10-11 13:46:38">2023-10-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/29/2023-09/2023-09-29-python2.x.x%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/" title="Python 2.7.x使用pip报错"><img src="/files_/pics/default_pics/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python 2.7.x使用pip报错"/></a><div class="content"><a class="title" href="/2023/09/29/2023-09/2023-09-29-python2.x.x%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/" title="Python 2.7.x使用pip报错">Python 2.7.x使用pip报错</a><time datetime="2023-09-29T13:43:39.000Z" title="发表于 2023-09-29 21:43:39">2023-09-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/14/2023-09/2023-09-14-UE%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85/" title="UE源码从编译到安卓打包"><img src="/files_/pics/default_pics/5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="UE源码从编译到安卓打包"/></a><div class="content"><a class="title" href="/2023/09/14/2023-09/2023-09-14-UE%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85/" title="UE源码从编译到安卓打包">UE源码从编译到安卓打包</a><time datetime="2023-09-14T02:16:40.000Z" title="发表于 2023-09-14 10:16:40">2023-09-14</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/files_/pics/default_pics/1.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By Cx330-502</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">welcome to my <a href="https://cx330-502.github.io/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addModeChange('mermaid', runMermaid)
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><script id="canvas_nest" defer="defer" color="255,255,255" opacity="1" zIndex="-1" count="99" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="富强,民主,文明" data-fontsize="15px" data-random="true" async="async"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

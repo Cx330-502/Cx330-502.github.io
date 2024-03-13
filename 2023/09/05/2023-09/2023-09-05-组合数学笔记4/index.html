@@ -1,0 +1,591 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>组合数学笔记(四) | 52Hz的鲸歌</title><meta name="author" content="Cx330-502"><meta name="copyright" content="Cx330-502"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="对方不想和你说话并向你扔了一本组合数学(bushi) 上学期记了一个学期的组合数学笔记发一下叭~">
+<meta property="og:type" content="article">
+<meta property="og:title" content="组合数学笔记(四)">
+<meta property="og:url" content="https://cx330-502.github.io/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B04/index.html">
+<meta property="og:site_name" content="52Hz的鲸歌">
+<meta property="og:description" content="对方不想和你说话并向你扔了一本组合数学(bushi) 上学期记了一个学期的组合数学笔记发一下叭~">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cx330-502.github.io/files_/pics/default_pics/2.jpg">
+<meta property="article:published_time" content="2023-09-05T07:18:30.000Z">
+<meta property="article:modified_time" content="2023-09-05T07:18:32.000Z">
+<meta property="article:author" content="Cx330-502">
+<meta property="article:tag" content="组合数学">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cx330-502.github.io/files_/pics/default_pics/2.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://cx330-502.github.io/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B04/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Cx330-502","link":"链接: ","source":"来源: 52Hz的鲸歌","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '组合数学笔记(四)',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-09-05 15:18:32'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/files_/css/mycss.css"><meta name="generator" content="Hexo 6.3.0"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+document.addEventListener('pjax:send', () => {
+  Pace.restart()
+})
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/files_/pics/avatars/1.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/files_/pics/default_pics/2.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="52Hz的鲸歌"><span class="site-name">52Hz的鲸歌</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">组合数学笔记(四)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-09-05T07:18:30.000Z" title="发表于 2023-09-05 15:18:30">2023-09-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-05T07:18:32.000Z" title="更新于 2023-09-05 15:18:32">2023-09-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>9分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="组合数学笔记(四)"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="组合数学"><a href="#组合数学" class="headerlink" title="组合数学"></a>组合数学</h3><h2 id="第8章-特殊计数序列"><a href="#第8章-特殊计数序列" class="headerlink" title="第8章 特殊计数序列"></a>第8章 特殊计数序列</h2><h3 id="8-1-Catalan-数"><a href="#8-1-Catalan-数" class="headerlink" title="8.1 Catalan 数"></a>8.1 Catalan 数</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p> Catalan 数列是序列  <script type="math/tex">C_0, C_1,…, C_n,…,</script>  其中</p>
+<script type="math/tex; mode=display">
+C_n = \frac{1}{n+1}{{2n}\choose{n}}，\quad n=0,1,2,...</script><p>是第  <script type="math/tex">n</script> 个 Catalan 数。</p>
+<p>凸  <script type="math/tex">n+1</script>  边形被在其内部不相交的对角线划分成三角形区域的方法数为  <script type="math/tex">C_{n-1}</script> </p>
+<p>由  <script type="math/tex">C_{n-1}=h_n</script>  得递推为：</p>
+<script type="math/tex; mode=display">
+C_n=C_0C_{n-1}+C_1C_{n-2}+...+C_{n-1}C_0</script><p>另一个递推：</p>
+<script type="math/tex; mode=display">
+C_n=\frac{4n-2}{n+1}C_{n-1}\quad(n\geq1),C_0=1</script><h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h4><ol>
+<li>括号化问题</li>
+<li>出栈次序问题</li>
+<li><script type="math/tex">n</script>  个结点构成得二叉树数</li>
+</ol>
+<h4 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h4><h5 id="8-1-1"><a href="#8-1-1" class="headerlink" title="8.1.1"></a>8.1.1</h5><p>考虑由  <script type="math/tex">n</script>  个  <script type="math/tex">+1</script>  和  <script type="math/tex">n</script>  个  <script type="math/tex">-1</script>  构成的  <script type="math/tex">2n</script>  项序列</p>
+<script type="math/tex; mode=display">
+a_1,a_2,...,a_{2n},</script><p>其部分和总满足：</p>
+<script type="math/tex; mode=display">
+a_1+a_2+...+a_k\geq0\quad (k=1,2,...,2n)</script><p>的序列的个数等于第  <script type="math/tex">n</script>  个Catalan数</p>
+<p>可解决的问题</p>
+<ul>
+<li>买票找零问题</li>
+<li>走方格问题</li>
+</ul>
+<h4 id="拟-Catalan-数"><a href="#拟-Catalan-数" class="headerlink" title="拟 Catalan 数"></a>拟 Catalan 数</h4><p>定义一个新数列：</p>
+<script type="math/tex; mode=display">
+C_1^*,C_2^*,...,C_n^*,....</script><p>其中， <script type="math/tex">C_n^*=n!C_{n-1},n=1,2,...,n,...</script> </p>
+<p>得到：</p>
+<script type="math/tex; mode=display">
+C_n^*=(n-1)!{2n-2\choose n-1}</script><p>将 Catalan 数的递推关系代入得到拟 Catalan 数的递推<br>关系：</p>
+<script type="math/tex; mode=display">
+C_n^*=(4n-6)C_{n-1}^*\quad(n \geq 1)</script><p>初值为：</p>
+<script type="math/tex; mode=display">
+C_1^*=1</script><h3 id="8-2-差分序列"><a href="#8-2-差分序列" class="headerlink" title="8.2 差分序列"></a>8.2 差分序列</h3><h4 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h4><p>设  <script type="math/tex">h_0, h_1, h_2, …, h_n, …</script>  是一个序列。定义新序列：</p>
+<script type="math/tex; mode=display">
+\Delta h_0, \Delta h_1, \Delta h_2, …, \Delta h_n,…，</script><p>称为  <script type="math/tex">h_0, h_1, h_2, …, h_n, …</script>  的（一阶）差分序列，其中  <script type="math/tex">\Delta h_n= h_{n+1}－h_n\quad(n≥0)</script>  ，是序列的相邻项的差。</p>
+<h5 id="递归定义"><a href="#递归定义" class="headerlink" title="递归定义"></a>递归定义</h5><p> 对 <script type="math/tex">0</script>  阶差分序列： <script type="math/tex">h_0, h_1, h_2, …, h_n, …,</script> </p>
+<p> 对 <script type="math/tex">1</script>  阶差分序列：  <script type="math/tex">\Delta^1h_n＝h_{n+1}－h_n\quad(n＝0,1,2,…)</script>  </p>
+<p> 对 <script type="math/tex">2</script>  阶差分序列： </p>
+<script type="math/tex; mode=display">
+\begin{aligned} 
+&\Delta^2h_n=\Delta(\Delta^1h_n)\\ 
+=&\Delta^1h_{n+1}－\Delta^1h_n = (h_{n+2}－h_{n+1})－(h_{n+1}－h_n)\\
+=&h_{n+2}－2h_{n+1}+ h_n\quad(n≥ 0)
+\end{aligned}</script><p> 对 <script type="math/tex">k</script>  阶差分序列：</p>
+<script type="math/tex; mode=display">
+\Delta^kh_n=\Delta(\Delta^{k-1}h_n)
+=\Delta^{k-1}h_{n+1}－\Delta^{k-1}h_n
+\quad (n=0,1,2,...)</script><h5 id="差分表"><a href="#差分表" class="headerlink" title="差分表"></a>差分表</h5><p>设序列  <script type="math/tex">h_n\quad(n=0,1,2,...)</script>  ，最上面一行是第  <script type="math/tex">0</script>  行！！！</p>
+<script type="math/tex; mode=display">
+h_0 \qquad h_1 \qquad h_2 \qquad h_3 \qquad h_4 \qquad ...\\
+\Delta^1h_0 \quad \Delta^1h_1 \quad \Delta^1h_2 \quad \Delta^1h_3 \quad ...\\
+\Delta^2h_0 \quad \Delta^2h_1 \quad \Delta^2h_2 \quad ...\\
+\Delta^3h_0 \quad \Delta^3h_1 \quad ...\\
+...</script><ul>
+<li><script type="math/tex; mode=display">\Delta^ph_n=\Delta^{p-1}h_{n+1}－\Delta^{p-1}h_n</script></li>
+<li>序列  <script type="math/tex">h_n (n＝0,1,2,…)</script>  的差分表由第  <script type="math/tex">0</script>  行确定</li>
+</ul>
+<h4 id="定理-1"><a href="#定理-1" class="headerlink" title="定理"></a>定理</h4><h5 id="8-2-1"><a href="#8-2-1" class="headerlink" title="8.2.1"></a>8.2.1</h5><p>设序列的通项  <script type="math/tex">h_n</script>  是  <script type="math/tex">n</script>  的  <script type="math/tex">p</script>  次多项式：</p>
+<script type="math/tex; mode=display">
+h_n= a_pn^p+a_{p-1}n^{p-1}+a_{p-2}n^{p-2}+……+a_1n+a_0,</script><p>则对于所有的  <script type="math/tex">n\geq 0</script>  ，必有：  <script type="math/tex">∆^{p+1}h_n= 0</script>  。</p>
+<h5 id="8-2-2"><a href="#8-2-2" class="headerlink" title="8.2.2"></a>8.2.2</h5><p>差分表的第  <script type="math/tex">0</script>  条对角线等于</p>
+<script type="math/tex; mode=display">
+c_0,c_1,c_2, …,c_p,0,0,0, …， 其中cp \neq 0</script><p>的序列的通项满足：</p>
+<script type="math/tex; mode=display">
+h_n=c_0{n\choose0}+c_1{n\choose1}+c_2{n\choose2}+...+c_p{n\choose p}</script><p>的关于  <script type="math/tex">n</script>  的  <script type="math/tex">p</script>  次多项式。</p>
+<h6 id="证明思路"><a href="#证明思路" class="headerlink" title="证明思路"></a>证明思路</h6><p>线性性+简单差分表</p>
+<h5 id="8-2-3"><a href="#8-2-3" class="headerlink" title="8.2.3"></a>8.2.3</h5><p>假设序列  <script type="math/tex">h_0, h_1, …, h_n,…</script>  的差分表的第  <script type="math/tex">0</script>  条对角线等于</p>
+<script type="math/tex; mode=display">
+c_0, c_1, …, c_p, 0, 0,…</script><p>那么：</p>
+<script type="math/tex; mode=display">
+\Sigma^n_{k=0}h_k=c_0{n+1\choose1}+c_1{n+1\choose2}+...+c_p{n+1\choose p+1}</script><p>（证明中间有一段： <script type="math/tex">\Sigma^n_{k=0}{k\choose p}={n+1\choose p+1}</script> ）</p>
+<h6 id="应用-1"><a href="#应用-1" class="headerlink" title="应用"></a>应用</h6><ul>
+<li>一般项为多项式的序列的部分和</li>
+</ul>
+<h5 id="8-2-4"><a href="#8-2-4" class="headerlink" title="8.2.4"></a>8.2.4</h5><p>若  <script type="math/tex">1\leq k\leq p-1</script>  ，则：</p>
+<script type="math/tex; mode=display">
+S(p,k)=kS(p-1,k)+S(p-1,k-1)</script><p>类比二项式公式中：</p>
+<script type="math/tex; mode=display">
+{n\choose k}={n-1\choose k}+{n-1\choose k-1}</script><p>类  <script type="math/tex">Pascal</script>  三角形：</p>
+<p>直接上方的元素乘以  <script type="math/tex">k</script>  再加上其左上方的元素</p>
+<h5 id="8-2-5"><a href="#8-2-5" class="headerlink" title="8.2.5"></a>8.2.5</h5><p>第二类  <script type="math/tex">Stirling</script>  数  <script type="math/tex">S(p, k)</script>  计数的是把  <script type="math/tex">p</script>  元素集合划分到  <script type="math/tex">k</script> 个不可区分的盒子且没有空盒子的划分的个数。</p>
+<h5 id="8-2-6"><a href="#8-2-6" class="headerlink" title="8.2.6"></a>8.2.6</h5><p>对每一个满足  <script type="math/tex">0\leq k \leq p</script>  的整数  <script type="math/tex">k</script>  ，都有</p>
+<script type="math/tex; mode=display">
+S^{\sharp}(p,k)=\Sigma^k_{t=0}(-1)^t{k\choose t}(k-t)^p</script><p>从而  <script type="math/tex">S(p,k)=\frac 1{k!}\Sigma^k_{t=0}(-1)^t{k\choose t}(k-t)^p</script>  </p>
+<h5 id="8-2-7"><a href="#8-2-7" class="headerlink" title="8.2.7"></a>8.2.7</h5><p>如果  <script type="math/tex">p\geq1</script>  ，则：</p>
+<script type="math/tex; mode=display">
+B_p={p-1\choose0}B_0+
+{p-1\choose1}B_1+
+{p-1\choose2}B_2+
+...
++{p-1\choose p-1}B_{p-1}</script><h5 id="8-2-8"><a href="#8-2-8" class="headerlink" title="8.2.8"></a>8.2.8</h5><p>若  <script type="math/tex">1\leq k \leq p-1</script>  ，则：</p>
+<script type="math/tex; mode=display">
+s(p,k) = (p-1)s(p-1,k)+s(p-1,k-1)</script><h5 id="8-2-9"><a href="#8-2-9" class="headerlink" title="8.2.9"></a>8.2.9</h5><p>第一类  <script type="math/tex">Stirling</script>  数  <script type="math/tex">S_1(p, k)</script>  是将  <script type="math/tex">p</script>  个物品排成  <script type="math/tex">k</script>  个非空的循环排列的方法数</p>
+<h4 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h4><ul>
+<li>差分表由第  <script type="math/tex">0</script>  行上元素的值就能决定</li>
+<li>差分表也可由第  <script type="math/tex">0</script>  条对角线决定</li>
+</ul>
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><h5 id="简单差分表1"><a href="#简单差分表1" class="headerlink" title="简单差分表1"></a>简单差分表1</h5><p>若第  <script type="math/tex">0</script>  条对角线全为  <script type="math/tex">0</script> </p>
+<h5 id="简单差分表1-1"><a href="#简单差分表1-1" class="headerlink" title="简单差分表1"></a>简单差分表1</h5><p>第  <script type="math/tex">0</script>  条对角线除一个  <script type="math/tex">1</script>  外都是  <script type="math/tex">0</script> </p>
+<p>首先 <script type="math/tex">1</script>  在第  <script type="math/tex">p</script>  行，前  <script type="math/tex">p</script>  个元素就都为  <script type="math/tex">0</script>  ，从  <script type="math/tex">p+1</script>  行开始的所有行的元素都是  <script type="math/tex">0</script> </p>
+<p>其次<script type="math/tex">h_p = 1</script>  ，  <script type="math/tex">h_0=0,h_1=0,...,h_{p-1}=0</script>  ，故  <script type="math/tex">h_n</script>  有因子  <script type="math/tex">n(n-1)...(n-(p-1))</script>  ，再代入  <script type="math/tex">h_p = 1</script>  ，得到：</p>
+<script type="math/tex; mode=display">
+h_n=\frac{n(n-1)...(n-(p-1))}{p!}={n\choose p}</script><h4 id="差分表的线性性"><a href="#差分表的线性性" class="headerlink" title="差分表的线性性"></a>差分表的线性性</h4><p>设  <script type="math/tex">g_n</script>  和  <script type="math/tex">f_n</script>  分别是两个序列的通项，若  <script type="math/tex">h_n = g_n +f_n</script> </p>
+<ul>
+<li>一般的：  <script type="math/tex">\Delta^ph_n=\Delta^pg_n+ \Delta^pf_n\quad,\quad p\geq 0</script> </li>
+<li>更一般的，对于任何常数  <script type="math/tex">c, d</script>  来说，<script type="math/tex; mode=display">\Delta^p(cg_n+df_n)= c\Delta^pg_n+d\Delta^pf_n\quad(p≥ 0, n≥ 0)</script></li>
+</ul>
+<h4 id="差分表的第0条"><a href="#差分表的第0条" class="headerlink" title="差分表的第0条"></a>差分表的第0条</h4><h5 id="组合意义"><a href="#组合意义" class="headerlink" title="组合意义"></a>组合意义</h5><p>(由定理8.2.2)</p>
+<p>对于序列  <script type="math/tex">h_n= n^p</script>  ，设其差分表中第  <script type="math/tex">0</script>  条对角线上的元素为   <script type="math/tex">c_0, c_1, …, c_p, 0, 0,…，</script>  引入标记：</p>
+<script type="math/tex; mode=display">
+c(p, 0) =c_0, c(p, 1) = c_1, …, c(p, p) =c_p, 0, 0, ...</script><p>则有：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+h_n=n^p&=c_0{n\choose0}+c_1{n\choose1}+...+c_p{n\choose p}\\
+&=c(p,0){n\choose0}+c(p,1){n\choose1}+...+c(p,p){n\choose p}
+\end{aligned}</script><h6 id="特殊值1：-c-p-0"><a href="#特殊值1：-c-p-0" class="headerlink" title="特殊值1：  c(p,0)"></a>特殊值1：  <script type="math/tex">c(p,0)</script></h6><script type="math/tex; mode=display">
+c(p,0)=
+\begin{cases}
+1& p=0\\
+0& p \geq 1
+\end{cases}</script><h6 id="特殊值2："><a href="#特殊值2：" class="headerlink" title="特殊值2："></a>特殊值2：</h6><p>由  <script type="math/tex">n^p</script>  项系数相等，得：  <script type="math/tex">1=\frac{c(p,p)}{p!}</script> </p>
+<script type="math/tex; mode=display">c(p,p)=p!</script><h6 id="特殊值3："><a href="#特殊值3：" class="headerlink" title="特殊值3："></a>特殊值3：</h6><script type="math/tex; mode=display">
+令 [n]_k=
+\begin{cases}
+n(n-1)...(n-k+1), &k\geq1\\
+1, &k=0
+\end{cases}</script><p>则，  <script type="math/tex">[n]_k</script>  =  <script type="math/tex">n</script>  个不同元素中取  <script type="math/tex">k</script>  个元素的排列数  <script type="math/tex">P(n, k)</script> </p>
+<p>递推关系：</p>
+<script type="math/tex; mode=display">
+[n]_k=(n-k)[n]_k</script><p>且：</p>
+<script type="math/tex; mode=display">
+[n]_k=k!{n\choose k}</script><p>故：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+h_n=n^p&=c(p,0){\frac{[n]_0}{0!}}+c(p,1){\frac{[n]_1}{1!}}+...+c(p,p){\frac{[n]_p}{p!}}\\
+&=\sum^p_{k=0}c(p,k){\frac{[n]_k}{k!}}\\
+&=\sum^p_{k=0}\frac{c(p,k)}{k!}[n]_k
+\end{aligned}</script><p>令  <script type="math/tex">S(p,k) = \frac{c(p,k)}{k!}</script>    <script type="math/tex">(0\leq k\leq p)</script>  ，成为第二类  <script type="math/tex">Srirling</script>  数</p>
+<p> 所以 <script type="math/tex">h_n=n^p</script>  的展开式变为：  <script type="math/tex">h_n=n^p=\sum^p_{k=0}S(p,k)[n]_k</script> </p>
+<h4 id="第二类-Srirling-数"><a href="#第二类-Srirling-数" class="headerlink" title="第二类  Srirling  数"></a>第二类  <script type="math/tex">Srirling</script>  数</h4><h5 id="特殊值："><a href="#特殊值：" class="headerlink" title="特殊值："></a>特殊值：</h5><script type="math/tex; mode=display">
+S(p,0)=c(p,0)=
+\begin{cases}
+1& p=0\\
+0& p \geq 1
+\end{cases}</script><script type="math/tex; mode=display">
+S(p,p)=1\quad(p\geq1)</script><h5 id="递推公式："><a href="#递推公式：" class="headerlink" title="递推公式："></a>递推公式：</h5><p>定理8.2.4</p>
+<h5 id="组合解释："><a href="#组合解释：" class="headerlink" title="组合解释："></a>组合解释：</h5><p>投球入盒</p>
+<p>定理8.2.5</p>
+<h4 id="Bell-数"><a href="#Bell-数" class="headerlink" title="Bell  数"></a><script type="math/tex">Bell</script>  数</h4><p>令  <script type="math/tex">S^{\sharp}(p,k) = k!S(p,k)</script>  表示把  <script type="math/tex">\lbrace1, 2, …, p\rbrace</script>  分到  <script type="math/tex">k</script>  个<strong>非空</strong>且<strong>可区分</strong>的<br>盒子的划分个数，则</p>
+<script type="math/tex; mode=display">
+S^{\sharp}(p,k) = k!S(p,k)</script><p>公式：定理 8.2.6</p>
+<p>所以 <script type="math/tex">S^{\sharp}(p,k)</script> ：把  <script type="math/tex">\lbrace1, 2, …, p\rbrace</script>  分到  <script type="math/tex">k</script>  个<strong>非空</strong>且<strong>可区分</strong>的盒子的划分个数。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><script type="math/tex">p</script>  个物品</th>
+<th style="text-align:center"><script type="math/tex">k</script>  个盒子</th>
+<th style="text-align:center">空盒</th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">有区别</td>
+<td style="text-align:center">无区别</td>
+<td style="text-align:center">没有</td>
+<td style="text-align:center"><script type="math/tex">S(p,k)</script></td>
+</tr>
+<tr>
+<td style="text-align:center">有区别</td>
+<td style="text-align:center">有区别</td>
+<td style="text-align:center">没有</td>
+<td style="text-align:center"><script type="math/tex">S^{\sharp}(p,k)</script></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h5><p> 定义 <script type="math/tex">Bell</script>  数是将  <script type="math/tex">p</script>  个元素的集合划分到非空、不可区分的盒子（盒子数  <script type="math/tex">\leq p</script> ）的划分数，记为  <script type="math/tex">B_p</script>  ，则：</p>
+<script type="math/tex; mode=display">
+B_p=S(p,0)+S(p,1)+...+S(p,p)</script><p>是第二类  <script type="math/tex">Stirling</script>  数三角形的一行的元素和</p>
+<h5 id="递推"><a href="#递推" class="headerlink" title="递推"></a>递推</h5><p>定理 8.2.7</p>
+<h4 id="第一类-Srirling-数"><a href="#第一类-Srirling-数" class="headerlink" title="第一类  Srirling  数"></a>第一类  <script type="math/tex">Srirling</script>  数</h4><h5 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h5><p>第二类  <script type="math/tex">Srirling</script>  数  <script type="math/tex">S(n,p)</script> </p>
+<ul>
+<li>指出如何用  <script type="math/tex">[n]_0,[n]_1,[n]_2,...,[n]_p</script>  写出  <script type="math/tex">n^p</script> </li>
+<li>把  <script type="math/tex">p</script>  个元素的集合划分到  <script type="math/tex">k</script>  个不可区分的盒子且没有空盒的划分的个数</li>
+</ul>
+<p>第一类  <script type="math/tex">Srirling</script>  数  <script type="math/tex">s(n,p)</script> </p>
+<ul>
+<li>如何用  <script type="math/tex">n^0,n^1,n^2,...,n^p</script>  写出  <script type="math/tex">[n]_p</script> </li>
+<li>将  <script type="math/tex">p</script>  个物品排成  <script type="math/tex">k</script>  个非空的循环排列方法数</li>
+</ul>
+<h5 id="定义-3"><a href="#定义-3" class="headerlink" title="定义"></a>定义</h5><p>一般地，  <script type="math/tex">[n]_p</script>  展开式有  <script type="math/tex">p</script>  个因子<br>乘开后得到  <script type="math/tex">n</script>  的幂多项式，  <script type="math/tex">n^p,n^{p-1},...,n^1,n^0</script><br>其系数的符号正负相间。故：</p>
+<script type="math/tex; mode=display">
+[n]_p=a^p_nn^p
+-a^{p-1}_nn^{p-1}
++......+
++(-1)^{p-1}a^{1}_nn^{1}+
+(-1)^{p}a^{0}_nn^{0}</script><script type="math/tex; mode=display">n_k $$  前的系数  $$ a_n^k $$  称为第一类  $$ Stirling $$  数，记为  $$ s(p, k)</script><h5 id="特殊值"><a href="#特殊值" class="headerlink" title="特殊值"></a>特殊值</h5><script type="math/tex; mode=display">
+s(p, 0) = 0 \quad(p\geq1)\\s(p, p) =1 \quad(p\geq0)</script><h5 id="递推式"><a href="#递推式" class="headerlink" title="递推式"></a>递推式</h5><p>定理 8.2.8</p>
+<h5 id="组合意义-1"><a href="#组合意义-1" class="headerlink" title="组合意义"></a>组合意义</h5><p>定理 8.2.9</p>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><script type="math/tex">p</script>  个球</th>
+<th style="text-align:center"><script type="math/tex">k</script>  个盒</th>
+<th style="text-align:center">是否为空</th>
+<th style="text-align:center">方案个数</th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">有区别</td>
+<td style="text-align:center">有区别</td>
+<td style="text-align:center">有空盒</td>
+<td style="text-align:center"><script type="math/tex">k^p</script></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">有区别</td>
+<td style="text-align:center">无区别</td>
+<td style="text-align:center">无空盒</td>
+<td style="text-align:center"><script type="math/tex">S(p,k)</script></td>
+<td style="text-align:center"><script type="math/tex">S_2(p,k)</script></td>
+</tr>
+<tr>
+<td style="text-align:center">有区别</td>
+<td style="text-align:center">有区别</td>
+<td style="text-align:center">无空盒</td>
+<td style="text-align:center"><script type="math/tex">k!S(p,k)</script></td>
+<td style="text-align:center"><script type="math/tex">S^{\sharp}(p,k)</script></td>
+</tr>
+<tr>
+<td style="text-align:center">有区别</td>
+<td style="text-align:center">无区别</td>
+<td style="text-align:center">有空盒</td>
+<td style="text-align:center"><script type="math/tex">S(p,1)+S(p,2)+...S(p,k)，p\geq k</script></td>
+<td style="text-align:center"><script type="math/tex">Bell</script>  数</td>
+</tr>
+<tr>
+<td style="text-align:center">有区别</td>
+<td style="text-align:center">无区别</td>
+<td style="text-align:center">有空盒</td>
+<td style="text-align:center"><script type="math/tex">S(p,1)+S(p,2)+...S(p,p)，p\leq k</script></td>
+<td style="text-align:center"><script type="math/tex">Bell</script>  数</td>
+</tr>
+<tr>
+<td style="text-align:center">有区别</td>
+<td style="text-align:center"><script type="math/tex">k</script>  个循环序列</td>
+<td style="text-align:center">非空</td>
+<td style="text-align:center"><script type="math/tex">s(p,k)</script></td>
+<td style="text-align:center"><script type="math/tex">S_1(p,k)</script></td>
+</tr>
+</tbody>
+</table>
+</div>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a target="_blank" rel="noopener" href="https://github.com/Cx330-502">Cx330-502</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://cx330-502.github.io/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B04/">https://cx330-502.github.io/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B04/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://cx330-502.github.io" target="_blank">52Hz的鲸歌</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">组合数学</a><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a></div><div class="post_share"><div class="social-share" data-image="/files_/pics/default_pics/2.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B03/" title="组合数学笔记(三)"><img class="cover" src="/files_/pics/default_pics/2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">组合数学笔记(三)</div></div></a></div><div class="next-post pull-right"><a href="/2023/09/07/2023-09/2023-09-07-%E7%A7%91%E7%A0%94%E8%AF%BE%E5%A0%82python/" title="Python基础架构"><img class="cover" src="/files_/pics/default_pics/1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Python基础架构</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/" title="组合数学笔记(一)"><img class="cover" src="/files_/pics/default_pics/5.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-05</div><div class="title">组合数学笔记(一)</div></div></a></div><div><a href="/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B02/" title="组合数学笔记(二)"><img class="cover" src="/files_/pics/default_pics/1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-05</div><div class="title">组合数学笔记(二)</div></div></a></div><div><a href="/2023/09/05/2023-09/2023-09-05-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B03/" title="组合数学笔记(三)"><img class="cover" src="/files_/pics/default_pics/2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-05</div><div class="title">组合数学笔记(三)</div></div></a></div><div><a href="/2023/09/07/2023-09/2023-09-07-%E7%A7%91%E7%A0%94%E8%AF%BE%E5%A0%82python/" title="Python基础架构"><img class="cover" src="/files_/pics/default_pics/1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-07</div><div class="title">Python基础架构</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/files_/pics/avatars/1.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Cx330-502</div><div class="author-info__description">我与春风皆过客，你携秋水揽星河</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Cx330-502"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Cx330-502" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1175963382zx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">52Hz的鲸歌</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6"><span class="toc-text">组合数学</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC8%E7%AB%A0-%E7%89%B9%E6%AE%8A%E8%AE%A1%E6%95%B0%E5%BA%8F%E5%88%97"><span class="toc-text">第8章 特殊计数序列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-Catalan-%E6%95%B0"><span class="toc-text">8.1 Catalan 数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-text">定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BA%94%E7%94%A8"><span class="toc-text">应用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E7%90%86"><span class="toc-text">定理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#8-1-1"><span class="toc-text">8.1.1</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8B%9F-Catalan-%E6%95%B0"><span class="toc-text">拟 Catalan 数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E5%B7%AE%E5%88%86%E5%BA%8F%E5%88%97"><span class="toc-text">8.2 差分序列</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89-1"><span class="toc-text">定义</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E5%AE%9A%E4%B9%89"><span class="toc-text">递归定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B7%AE%E5%88%86%E8%A1%A8"><span class="toc-text">差分表</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E7%90%86-1"><span class="toc-text">定理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-1"><span class="toc-text">8.2.1</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-2"><span class="toc-text">8.2.2</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%AF%81%E6%98%8E%E6%80%9D%E8%B7%AF"><span class="toc-text">证明思路</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-3"><span class="toc-text">8.2.3</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%BA%94%E7%94%A8-1"><span class="toc-text">应用</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-4"><span class="toc-text">8.2.4</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-5"><span class="toc-text">8.2.5</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-6"><span class="toc-text">8.2.6</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-7"><span class="toc-text">8.2.7</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-8"><span class="toc-text">8.2.8</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-9"><span class="toc-text">8.2.9</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%A7%E8%B4%A8"><span class="toc-text">性质</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-text">例子</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E5%B7%AE%E5%88%86%E8%A1%A81"><span class="toc-text">简单差分表1</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E5%B7%AE%E5%88%86%E8%A1%A81-1"><span class="toc-text">简单差分表1</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B7%AE%E5%88%86%E8%A1%A8%E7%9A%84%E7%BA%BF%E6%80%A7%E6%80%A7"><span class="toc-text">差分表的线性性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B7%AE%E5%88%86%E8%A1%A8%E7%9A%84%E7%AC%AC0%E6%9D%A1"><span class="toc-text">差分表的第0条</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E6%84%8F%E4%B9%89"><span class="toc-text">组合意义</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E5%80%BC1%EF%BC%9A-c-p-0"><span class="toc-text">特殊值1：  c(p,0)</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E5%80%BC2%EF%BC%9A"><span class="toc-text">特殊值2：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E5%80%BC3%EF%BC%9A"><span class="toc-text">特殊值3：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%B1%BB-Srirling-%E6%95%B0"><span class="toc-text">第二类  Srirling  数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E5%80%BC%EF%BC%9A"><span class="toc-text">特殊值：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%80%92%E6%8E%A8%E5%85%AC%E5%BC%8F%EF%BC%9A"><span class="toc-text">递推公式：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E8%A7%A3%E9%87%8A%EF%BC%9A"><span class="toc-text">组合解释：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Bell-%E6%95%B0"><span class="toc-text">Bell  数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89-2"><span class="toc-text">定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%80%92%E6%8E%A8"><span class="toc-text">递推</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%B1%BB-Srirling-%E6%95%B0"><span class="toc-text">第一类  Srirling  数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%B9%E6%AF%94"><span class="toc-text">对比</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89-3"><span class="toc-text">定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E5%80%BC"><span class="toc-text">特殊值</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%80%92%E6%8E%A8%E5%BC%8F"><span class="toc-text">递推式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E6%84%8F%E4%B9%89-1"><span class="toc-text">组合意义</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-text">小结</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/11/11/2023-11/2023-11-11-llvm%E4%B8%AD%E9%97%B4%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90-%E8%B7%B3%E8%BD%AC/" title="LLVM 中间代码生成 跳转"><img src="/files_/pics/default_pics/5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LLVM 中间代码生成 跳转"/></a><div class="content"><a class="title" href="/2023/11/11/2023-11/2023-11-11-llvm%E4%B8%AD%E9%97%B4%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90-%E8%B7%B3%E8%BD%AC/" title="LLVM 中间代码生成 跳转">LLVM 中间代码生成 跳转</a><time datetime="2023-11-11T15:48:17.000Z" title="发表于 2023-11-11 23:48:17">2023-11-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/11/2023-10/2023-10-11-CPP%E5%A4%B4%E6%96%87%E4%BB%B6%E4%BE%9D%E8%B5%96%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/" title="Python CPP头文件依赖分析工具"><img src="/files_/pics/default_pics/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python CPP头文件依赖分析工具"/></a><div class="content"><a class="title" href="/2023/10/11/2023-10/2023-10-11-CPP%E5%A4%B4%E6%96%87%E4%BB%B6%E4%BE%9D%E8%B5%96%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/" title="Python CPP头文件依赖分析工具">Python CPP头文件依赖分析工具</a><time datetime="2023-10-11T05:53:39.000Z" title="发表于 2023-10-11 13:53:39">2023-10-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/11/2023-10/2023-10-11-%E6%8E%92%E7%8F%AD%E5%B7%A5%E5%85%B7/" title="Python 排班工具"><img src="/files_/pics/default_pics/3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python 排班工具"/></a><div class="content"><a class="title" href="/2023/10/11/2023-10/2023-10-11-%E6%8E%92%E7%8F%AD%E5%B7%A5%E5%85%B7/" title="Python 排班工具">Python 排班工具</a><time datetime="2023-10-11T05:46:38.000Z" title="发表于 2023-10-11 13:46:38">2023-10-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/29/2023-09/2023-09-29-python2.x.x%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/" title="Python 2.7.x使用pip报错"><img src="/files_/pics/default_pics/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python 2.7.x使用pip报错"/></a><div class="content"><a class="title" href="/2023/09/29/2023-09/2023-09-29-python2.x.x%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/" title="Python 2.7.x使用pip报错">Python 2.7.x使用pip报错</a><time datetime="2023-09-29T13:43:39.000Z" title="发表于 2023-09-29 21:43:39">2023-09-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/14/2023-09/2023-09-14-UE%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85/" title="UE源码从编译到安卓打包"><img src="/files_/pics/default_pics/5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="UE源码从编译到安卓打包"/></a><div class="content"><a class="title" href="/2023/09/14/2023-09/2023-09-14-UE%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85/" title="UE源码从编译到安卓打包">UE源码从编译到安卓打包</a><time datetime="2023-09-14T02:16:40.000Z" title="发表于 2023-09-14 10:16:40">2023-09-14</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/files_/pics/default_pics/2.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By Cx330-502</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">welcome to my <a href="https://cx330-502.github.io/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addModeChange('mermaid', runMermaid)
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><script id="canvas_nest" defer="defer" color="255,255,255" opacity="1" zIndex="-1" count="99" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="富强,民主,文明" data-fontsize="15px" data-random="true" async="async"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
